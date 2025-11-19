@@ -1,197 +1,178 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nuclear Disaster Case Study</title>
+  <meta charset="utf-8">
+  <title>Nuclear Disaster Case Study</title>
+  <style>
+    /* Basic reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <style>
-        body {
-            font-family: Arial;
-            background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f0f10;
+      color: #f2f2f2;
+      line-height: 1.6;
+      text-align: center;          /* CENTERED TEXT */
+    }
 
-        /* NAVBAR */
-        .navbar {
-            background-color: #222;
-            padding: 15px;
-            text-align: left;
-        }
+    /* Hazard banner (thick stripes) */
+    .hazard {
+      background: repeating-linear-gradient(
+        135deg,
+        #ffd700 0 20px,
+        #111 20px 40px
+      );
+      padding: 18px 0;
+      border-bottom: 6px solid #111;
+    }
 
-        .navbar a {
-            color: white;
-            margin-right: 25px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-        }
+    .hazard h1 {
+      color: #111;
+      background: rgba(255,255,255,0.0);
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 6px;
+      font-size: 28px;
+      font-weight: 800;
+    }
 
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(to right, #1e3c72, #2a5298);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+    .hazard .icon {
+      display:inline-block;
+      margin-right:12px;
+      vertical-align: middle;
+      font-size: 28px;
+      color: #111;
+      font-weight: 900;
+    }
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
+    /* Main container */
+    .container {
+      max-width: 1100px;
+      margin: 28px auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+      padding: 26px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      text-align: center; /* keep text centered */
+    }
 
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: auto;
-        }
+    h2 { color: #ffd700; margin-bottom: 10px; }
+    p { color: #ddd; margin-bottom: 14px; }
 
-        /* CONTAINER */
-        .container {
-            width: 90%;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            margin-top: 30px;
-            border-radius: 8px;
-        }
+    /* cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 18px;
+      text-align: center;
+    }
 
-        h2 { color: #333; }
+    .card {
+      background: rgba(0,0,0,0.35);
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
 
-        /* INFO CARDS */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin-top: 20px;
-        }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
 
-        .card {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
-            transition: transform 0.3s;
-        }
+    .card a {
+      color: #111;
+      background: #ffd700;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      margin-top: 8px;
+    }
 
-        .card:hover {
-            transform: scale(1.03);
-        }
+    /* gallery preview */
+    .gallery {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform .25s ease, box-shadow .25s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover { transform: scale(1.04); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
 
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
+    /* footer */
+    .footer {
+      margin-top: 24px;
+      color: #bbb;
+      font-size: 14px;
+    }
 
-        .card h3 {
-            margin-top: 0;
-        }
-
-        /* GALLERY */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
-        }
-
-        @media (max-width: 768px) {
-            .cards { grid-template-columns: 1fr; }
-            .gallery { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 480px) {
-            .gallery { grid-template-columns: 1fr; }
-        }
-    </style>
+    /* responsive */
+    @media (max-width: 900px) {
+      .cards { grid-template-columns: 1fr; }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 520px) {
+      .gallery { grid-template-columns: 1fr; }
+      .hazard h1 { font-size: 20px; }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="chernobyl.html">Chernobyl</a>
-    <a href="fukushima.html">Fukushima</a>
-</div>
+  <div class="hazard">
+    <span class="icon">☢</span>
+    <h1>NUCLEAR DISASTER STUDY — CASES & SIMULATIONS</h1>
+  </div>
 
-
-<!-- HERO SECTION -->
-<div class="hero">
-    <h1>Nuclear Disaster Case Studies</h1>
+  <div class="container">
+    <h2>Welcome</h2>
     <p>
-        A comparative study of the two most devastating nuclear disasters in history —
-        the Chernobyl Explosion (1986) and the Fukushima Daiichi Meltdown (2011).
-    </p>
-</div>
-
-
-<!-- MAIN CONTENT -->
-<div class="container">
-
-    <h2>About This Project</h2>
-    <p>
-        Nuclear disasters are catastrophic events that release harmful levels of radioactive material
-        into the environment. Such incidents not only cause immediate destruction but also leave
-        long-term environmental, social, and health impacts on future generations.
+      This project visualizes radioactive plume dispersion for major nuclear accidents using
+      the Gaussian Plume Model. Explore case studies, interactive heatmaps, timelines and image galleries.
     </p>
 
     <p>
-        This project focuses on two major nuclear disasters: **Chernobyl** in Ukraine and **Fukushima**
-        in Japan. Both incidents reshaped the global understanding of nuclear energy risks and pushed
-        the world toward stronger safety standards. This website presents detailed information,
-        simulation-based heatmaps, and image galleries to visualize the extent and impact of these events.
+      The two featured disasters are <strong>Chernobyl (1986)</strong> and <strong>Fukushima Daiichi (2011)</strong>.
+      Each page includes background, causes, long-term impacts, image galleries and an interactive plume visualization.
     </p>
-
-    <h2>Explore Each Disaster</h2>
 
     <div class="cards">
-        <div class="card">
-            <img src="images/c1.jpg">
-            <h3>👉 Chernobyl Disaster (1986)</h3>
-            <p>
-                A reactor explosion in Ukraine caused the largest nuclear accident in world history.
-                Learn about the cause, deaths, pollutants, and radioactive plume spread.
-            </p>
-            <a href="chernobyl.html" style="color:#1e3c72; font-weight:bold;">View Details →</a>
-        </div>
+      <div class="card">
+        <img src="images/c1.jpg" alt="Chernobyl preview">
+        <h3 style="color:#ffd700">Chernobyl (1986)</h3>
+        <p>Worst nuclear accident in history — reactor explosion, large-scale contamination, and long-term exclusion zones.</p>
+        <a href="chernobyl.html">View Case Study</a>
+      </div>
 
-        <div class="card">
-            <img src="images/f1.jpg">
-            <h3>👉 Fukushima Disaster (2011)</h3>
-            <p>
-                Triggered by a massive tsunami, Fukushima witnessed multiple reactor meltdowns.
-                Explore the timeline, causes, radiation impact, and heatmap simulation.
-            </p>
-            <a href="fukushima.html" style="color:#1e3c72; font-weight:bold;">View Details →</a>
-        </div>
+      <div class="card">
+        <img src="images/f1.jpg" alt="Fukushima preview">
+        <h3 style="color:#ffd700">Fukushima (2011)</h3>
+        <p>Tsunami-triggered meltdowns and long cleanup operations; major lessons for coastal nuclear plant safety.</p>
+        <a href="fukushima.html">View Case Study</a>
+      </div>
     </div>
 
-    <h2>Gallery Preview</h2>
-
+    <h2 style="margin-top:20px">Gallery Preview</h2>
     <div class="gallery">
-        <img src="images/c1.jpg">
-        <img src="images/f2.jpg">
-        <img src="images/c3.jpg">
+      <img src="images/c2.jpg" alt="preview">
+      <img src="images/f2.jpg" alt="preview">
+      <img src="images/c3.jpg" alt="preview">
     </div>
 
-</div>
+    <div class="footer">© Your Name — MCA Minor Project • Place files in repo root and images/ as instructed</div>
+  </div>
 
 </body>
 </html>
