@@ -2,14 +2,43 @@
 <html>
 <head>
     <title>Chernobyl Disaster</title>
+
     <style>
-        body { font-family: Arial; margin: 0; background-color: #f2f2f2; }
-        .navbar { background-color: #222; padding: 15px; }
+        body { font-family: Arial; background-color: #f5f5f5; margin: 0; }
+        .navbar { background-color: #333; padding: 15px; }
         .navbar a { color: white; margin-right: 20px; text-decoration: none; font-size: 18px; }
+
         .container { width: 90%; margin: auto; background: white; padding: 20px; margin-top: 20px; }
-        img { width: 100%; border-radius: 5px; margin-top: 15px; }
         h1, h2 { color: #333; }
-        p { font-size: 17px; line-height: 1.6; }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .gallery { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .gallery { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 
@@ -25,35 +54,73 @@
 
     <h1>Chernobyl Nuclear Disaster (1986)</h1>
 
-    <img src="images/c1.jpg">
-    <img src="images/c2.jpg">
-    <img src="images/c3.jpg">
-    <img src="images/c4.jpg">
-
-    <h2>Overview</h2>
+    <h2>Background</h2>
     <p>
-        The Chernobyl disaster occurred on April 26, 1986, at the Chernobyl Nuclear Power Plant in Ukraine
-        (then part of the Soviet Union). A late-night safety test went wrong, resulting in a steam explosion
-        and fire that released massive amounts of radioactive material into the atmosphere. It is considered
-        the worst nuclear accident in history.
+        The Chernobyl disaster is considered the worst nuclear accident in the history of nuclear power.
+        It occurred on 26 April 1986 at the Chernobyl Nuclear Power Plant in Pripyat, Ukraine.
+        A combination of design flaws and human error led to a catastrophic explosion in Reactor No. 4,
+        which released massive amounts of radioactive material into the environment.
     </p>
 
     <p>
-        The explosion destroyed Reactor 4 completely, scattering radioactive graphite and fuel
-        particles across the region. Emergency workers, firefighters, and plant staff were exposed
-        to extremely high radiation levels while attempting to control the fire and prevent further explosions.
-        The radioactive plume spread across Europe, contaminating land for thousands of kilometers.
+        The accident’s impact reached far beyond Ukraine. Radioactive clouds were carried across Europe,
+        affecting Belarus, Russia, Scandinavia, and even parts of Western Europe. Over 350,000 people were
+        evacuated from the most contaminated areas, leaving behind entire cities that remain abandoned even today.
     </p>
 
     <p>
-        Long-term effects included cancer cases, genetic disorders, wildlife mutations,
-        and the creation of the 2,600 km² Exclusion Zone. The disaster highlighted major flaws in reactor design,
-        safety culture, and emergency preparedness. Today, Chernobyl remains a symbol of the catastrophic risks
-        associated with nuclear power mismanagement.
+        The disaster also triggered major global reforms in nuclear safety. Chernobyl became a turning point,
+        forcing governments and nuclear agencies worldwide to adopt stricter regulations, emergency protocols,
+        and modern reactor designs to prevent such a catastrophe from ever happening again.
     </p>
+
+    <h2>Cause of Disaster</h2>
+    <p>
+        The accident occurred during a late-night safety test, where engineers attempted to simulate a power
+        outage. Unfortunately, they disabled several critical safety systems. The flawed RBMK reactor design
+        responded unpredictably at low power. A sudden power surge caused the reactor to explode, blowing apart
+        the building and exposing the radioactive core.
+    </p>
+
+    <p>
+        The explosion triggered a graphite fire that burned for 10 days, releasing radioactive fuel fragments
+        and toxic isotopes into the atmosphere. First responders, including firefighters, rushed into the core
+        area without proper protection, leading to severe radiation burns and deaths within days.
+    </p>
+
+    <h2>Deaths and Health Impact</h2>
+    <p>
+        The immediate death toll was 31, mostly plant workers and firefighters. Long-term effects are far more
+        difficult to measure. Studies estimate that radiation exposure caused thousands of cancers, particularly
+        thyroid cancer among children exposed to radioactive iodine. The region remains unsafe, and wildlife and
+        vegetation continue to show signs of radiation effects.
+    </p>
+
+    <h2>Major Pollutants Released</h2>
+    <ul>
+        <li>Iodine-131 (short-term thyroid risk)</li>
+        <li>Cesium-137 (long-term contamination)</li>
+        <li>Strontium-90</li>
+        <li>Xenon-133</li>
+    </ul>
+
+    <h2>Image Gallery</h2>
+
+    <div class="gallery">
+        <img src="images/c1.jpg">
+        <img src="images/c2.jpg">
+        <img src="images/c3.jpg">
+        <img src="images/c4.jpg">
+    </div>
 
     <h2>Heatmap Simulation</h2>
-    <iframe src="chernobyl-map.html" style="width:100%; height:600px;"></iframe>
+    <p>
+        The map below displays a simplified radioactive plume simulation based on wind direction and atmospheric
+        dispersion patterns. Although not an exact historical model, it demonstrates how radioactive particles
+        spread rapidly after the explosion.
+    </p>
+
+    <iframe src="chernobyl-map.html" width="100%" height="600px"></iframe>
 
 </div>
 
