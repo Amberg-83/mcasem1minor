@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nuclear Accidents - Home</title>
+    <title>Nuclear Disaster Case Studies</title>
     <style>
-        body { font-family: Arial; background-color: #f0f0f0; margin: 0; }
-        .navbar { background-color: #333; padding: 15px; }
+        body { font-family: Arial; margin: 0; background-color: #f7f7f7; }
+        .navbar { background-color: #222; padding: 15px; }
         .navbar a { color: white; margin-right: 20px; text-decoration: none; font-size: 18px; }
         .container { width: 90%; margin: auto; background: white; padding: 20px; margin-top: 20px; }
-        img { width: 100%; border-radius: 5px; margin-bottom: 15px; }
-        p { font-size: 16px; line-height: 1.6; }
         h1, h2 { color: #333; }
+        p { font-size: 17px; line-height: 1.6; }
+        .img-row { display: flex; gap: 10px; margin-top: 20px; }
+        .img-row img { width: 33%; height: 230px; object-fit: cover; border-radius: 5px; }
     </style>
 </head>
 
@@ -22,46 +23,35 @@
 </div>
 
 <div class="container">
-
-    <h1>Major Nuclear Accidents in History</h1>
+    <h1>Major Nuclear Disasters – Case Study Project</h1>
 
     <p>
-        Nuclear energy is one of the most powerful sources of electricity, but it comes
-        with significant risks. Although nuclear accidents are extremely rare, the few
-        that have occurred have resulted in environmental destruction, human casualties,
-        and long-term contamination that lasts for decades. This project focuses on the
-        two most severe nuclear disasters in human history: the Chernobyl Disaster of 1986
-        and the Fukushima Daiichi Accident of 2011.
+        Nuclear disasters remain some of the most devastating events in human history.  
+        They serve as powerful reminders of how technological failure, natural disasters, or human error 
+        can lead to large-scale environmental contamination and long-term health impacts.  
+        This project presents case studies of two of the most significant nuclear accidents:  
+        the **Chernobyl Disaster (1986)** in the Soviet Union and the **Fukushima Daiichi Disaster (2011)** in Japan.
     </p>
 
     <p>
-        The main objective of this project is to present an easy-to-understand visualization
-        of how radioactive material spreads during a nuclear accident. Using the Gaussian Plume
-        Model, we simulate how pollutants like Cesium-137 and Iodine-131 disperse into the
-        atmosphere depending on wind speed, wind direction, and emission intensity.
+        Both disasters occurred under very different circumstances—Chernobyl due to flawed reactor design and a failed safety test,  
+        and Fukushima due to a massive earthquake followed by a tsunami.  
+        Yet, both resulted in widespread radioactive contamination that affected land, water, animals,  
+        and human settlements for decades. This project compares these incidents and simulates the  
+        radioactive plume spread using Python and Folium.
     </p>
 
     <p>
-        Through interactive heatmaps and detailed case studies, this website allows users
-        to explore the causes, impact, and consequences of these nuclear disasters. The maps
-        included in each disaster page are generated using Python, NumPy, Folium, and environmental
-        dispersion formulas commonly used in atmospheric research.
+        Explore each disaster page to view images, heatmap simulations, causes, impacts, pollutants released,  
+        and historical background. These case studies remain essential for understanding nuclear safety  
+        and improving future reactor technologies.
     </p>
 
-    <h2>Chernobyl Nuclear Disaster (Ukraine, 1986)</h2>
-    <img src="https://i.imgur.com/Vzv2yXG.jpeg" alt="Chernobyl Reactor">
-    <p>
-        The explosion at Reactor 4 of the Chernobyl plant is considered the worst nuclear
-        accident ever recorded. The reactor exploded during a safety test, releasing an enormous
-        plume of radioactive material across Europe.
-    </p>
-
-    <h2>Fukushima Daiichi Accident (Japan, 2011)</h2>
-    <img src="https://i.imgur.com/NfKtX9k.jpeg" alt="Fukushima Nuclear Plant">
-    <p>
-        Triggered by a massive earthquake and tsunami, the Fukushima accident caused the meltdown
-        of three reactors, contaminating large portions of the Pacific Ocean and nearby land.
-    </p>
+    <div class="img-row">
+        <img src="images/c1.jpg">
+        <img src="images/f1.jpg">
+        <img src="images/c2.jpg">
+    </div>
 
 </div>
 
