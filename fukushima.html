@@ -11,6 +11,7 @@
       background:#111;
       padding:20px 0;
       border-bottom:2px solid #333;
+      position:relative;
     }
     .header h1 {
       color:#ffd700;
@@ -18,26 +19,41 @@
       font-weight:800;
     }
 
+    /* HOME BUTTON */
+    .home-btn {
+      position:absolute;
+      right:20px;
+      top:20px;
+      background:#ffd700;
+      padding:8px 14px;
+      color:black;
+      font-weight:bold;
+      border-radius:6px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+    .home-btn:hover { background:#e5c100; }
+
     .container {
       max-width:1100px;
       margin:30px auto;
       padding:25px;
       background:rgba(255,255,255,0.03);
       border-radius:10px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.6);
     }
 
     h2 { color:#ffd700; margin-bottom:10px; }
-    p { margin-bottom:14px; }
+    p { margin-bottom:14px; line-height:1.7; }
 
     .timeline {
       margin:22px auto;
       padding-left:18px;
-      max-width:900px;
       border-left:3px solid #333;
+      max-width:900px;
       text-align:left;
     }
-    .event { margin-bottom:15px; }
+
+    .event { margin-bottom:16px; }
     .date { color:#ffd700; font-weight:700; }
 
     .gallery {
@@ -56,63 +72,86 @@
     .gallery img:hover { transform:scale(1.05); }
 
     .lightbox {
-      display:none;
-      position:fixed;
-      top:0; left:0;
+      display:none; position:fixed; top:0; left:0;
       width:100%; height:100%;
       background:rgba(0,0,0,0.85);
       justify-content:center; align-items:center;
     }
     .lightbox:target { display:flex; }
+
+    .lightbox img {
+      max-width:90%; max-height:90%; border-radius:8px;
+    }
+
     .close {
       position:absolute; top:20px; right:20px;
-      background:#0007; color:#fff; padding:5px 10px;
-      font-size:26px; text-decoration:none;
-      border-radius:6px;
+      background:#0007; padding:5px 10px;
+      color:white; font-size:26px;
+      border-radius:6px; text-decoration:none;
     }
-    .lightbox img { max-width:90%; max-height:90%; border-radius:8px; }
 
     iframe {
-      width:100%;
-      height:600px;
+      width:100%; height:600px;
       border-radius:8px;
       border:1px solid #333;
       margin-top:20px;
     }
 
-    @media(max-width:900px) {
+    @media(max-width:900px){
       .gallery { grid-template-columns:1fr 1fr; }
     }
-    @media(max-width:550px) {
+    @media(max-width:550px){
       .gallery { grid-template-columns:1fr; }
     }
 
   </style>
 </head>
+
 <body>
 
   <div class="header">
     <h1>FUKUSHIMA DAIICHI — 2011</h1>
+    <a href="index.html" class="home-btn">Home</a>
   </div>
 
   <div class="container">
 
     <h2>Overview & Context</h2>
+
     <p>
-      On 11 March 2011 a magnitude 9.0 earthquake caused a massive tsunami that struck Japan’s east coast...
+      The Fukushima Daiichi nuclear disaster occurred on March 11, 2011, after one of the most powerful earthquakes ever recorded struck off Japan’s northeastern coast. 
+      The resulting tsunami overwhelmed the plant’s seawall, flooding backup generators and disabling the cooling systems. Although the reactors shut down automatically 
+      during the earthquake, the loss of power prevented circulation of coolant water, leading to dangerous overheating of the fuel rods. Within hours, the situation 
+      escalated, and over the next few days, three reactors experienced partial meltdowns. The hydrogen produced by the overheated fuel caused large explosions that 
+      severely damaged the facility, releasing radioactive materials into the air and ocean.
     </p>
+
     <p>
-      Flooding disabled backup generators and cooling systems, leading to core meltdowns in multiple reactors.
+      Japanese authorities quickly ordered mass evacuations from nearby towns and villages, ultimately displacing more than 150,000 people. Many were forced to leave 
+      behind belongings, homes, and family property without knowing whether they would ever return. Although radiation exposure levels were significantly lower than 
+      those in Chernobyl, the disaster created widespread psychological and social distress. Families were separated, industries halted, and the region experienced long-term 
+      economic disruption. Some residents were unable to return for years due to contamination and fear, while others have permanently resettled elsewhere.
     </p>
+
     <p>
-      It remains one of the costliest and most complex nuclear cleanups in history.
+      Environmental impacts of the accident remain a concern. Large amounts of radioactive contamination entered local soil and water bodies, prompting one of the largest 
+      decontamination efforts in Japan’s history. Millions of tons of contaminated soil were collected and stored in secure facilities. The handling of radioactive wastewater 
+      used to cool the damaged reactors has been among the most debated issues. Japan implemented multi-stage filtration to reduce radioactive content and has begun releasing 
+      treated water into the Pacific Ocean under international supervision. Despite safety assurances, the issue continues to spark global debate and public concern.
+    </p>
+
+    <p>
+      More than a decade later, the Fukushima site remains in a long-term decommissioning phase that could span 30 to 40 years. Removing the melted fuel debris is considered 
+      one of the most difficult engineering tasks ever attempted in nuclear history. The disaster prompted countries around the world to reassess nuclear safety practices, 
+      leading to stronger coastal protection, improved emergency protocols, and enhanced operator training. Fukushima stands as a reminder of how natural disasters can 
+      trigger complex technological emergencies and underscores the importance of preparedness, transparency, and robust engineering design.
     </p>
 
     <h2>Timeline</h2>
     <div class="timeline">
-      <div class="event"><div class="date">11 Mar 2011</div><p>Tsunami hits; cooling lost.</p></div>
-      <div class="event"><div class="date">12–15 Mar 2011</div><p>Hydrogen explosions and radiation releases.</p></div>
-      <div class="event"><div class="date">2011–Now</div><p>Large-scale cleanup, water treatment, long-term decommissioning.</p></div>
+      <div class="event"><div class="date">11 Mar 2011</div><p>Massive earthquake and tsunami strike Japan.</p></div>
+      <div class="event"><div class="date">12–15 Mar 2011</div><p>Hydrogen explosions damage reactors.</p></div>
+      <div class="event"><div class="date">2011–Now</div><p>Long-term cleanup and fuel removal continue.</p></div>
     </div>
 
     <h2>Image Gallery</h2>
@@ -128,7 +167,6 @@
 
   </div>
 
-  <!-- Lightboxes -->
   <div id="f1" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f1.jpg"></div>
   <div id="f2" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f2.jpg"></div>
   <div id="f3" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f3.jpg"></div>
