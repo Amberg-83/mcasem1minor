@@ -1,127 +1,138 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fukushima Disaster</title>
+  <meta charset="utf-8">
+  <title>Fukushima — Case Study</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:#0b0b0c; color:#eee; font-family:Arial; text-align:center; }
 
-    <style>
-        body { font-family: Arial; background-color: #f5f5f5; margin: 0; }
-        .navbar { background-color: #333; padding: 15px; }
-        .navbar a { color: white; margin-right: 20px; text-decoration: none; font-size: 18px; }
+    .header {
+      background:#111;
+      padding:20px 0;
+      border-bottom:2px solid #333;
+    }
+    .header h1 {
+      color:#ffd700;
+      font-size:28px;
+      font-weight:800;
+    }
 
-        .container { width: 90%; margin: auto; background: white; padding: 20px; margin-top: 20px; }
-        h1, h2 { color: #333; }
+    .container {
+      max-width:1100px;
+      margin:30px auto;
+      padding:25px;
+      background:rgba(255,255,255,0.03);
+      border-radius:10px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
+    h2 { color:#ffd700; margin-bottom:10px; }
+    p { margin-bottom:14px; }
 
-        .gallery img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
+    .timeline {
+      margin:22px auto;
+      padding-left:18px;
+      max-width:900px;
+      border-left:3px solid #333;
+      text-align:left;
+    }
+    .event { margin-bottom:15px; }
+    .date { color:#ffd700; font-weight:700; }
 
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
-        }
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:20px;
+    }
+    .gallery img {
+      width:100%; height:160px;
+      object-fit:cover;
+      border-radius:8px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .gallery img:hover { transform:scale(1.05); }
 
-        @media (max-width: 768px) {
-            .gallery { grid-template-columns: repeat(2, 1fr); }
-        }
+    .lightbox {
+      display:none;
+      position:fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.85);
+      justify-content:center; align-items:center;
+    }
+    .lightbox:target { display:flex; }
+    .close {
+      position:absolute; top:20px; right:20px;
+      background:#0007; color:#fff; padding:5px 10px;
+      font-size:26px; text-decoration:none;
+      border-radius:6px;
+    }
+    .lightbox img { max-width:90%; max-height:90%; border-radius:8px; }
 
-        @media (max-width: 480px) {
-            .gallery { grid-template-columns: 1fr; }
-        }
-    </style>
+    iframe {
+      width:100%;
+      height:600px;
+      border-radius:8px;
+      border:1px solid #333;
+      margin-top:20px;
+    }
+
+    @media(max-width:900px) {
+      .gallery { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:550px) {
+      .gallery { grid-template-columns:1fr; }
+    }
+
+  </style>
 </head>
-
 <body>
 
-<div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="chernobyl.html">Chernobyl</a>
-    <a href="fukushima.html">Fukushima</a>
-</div>
+  <div class="header">
+    <h1>FUKUSHIMA DAIICHI — 2011</h1>
+  </div>
 
-<div class="container">
+  <div class="container">
 
-    <h1>Fukushima Daiichi Nuclear Disaster (2011)</h1>
-
-    <h2>Background</h2>
+    <h2>Overview & Context</h2>
     <p>
-        The Fukushima Daiichi nuclear disaster occurred on March 11, 2011, after a powerful 9.0 magnitude
-        earthquake struck Japan. The earthquake triggered a massive tsunami that overwhelmed the coastal
-        defenses of the nuclear power plant, cutting off power and disabling critical cooling systems in
-        three reactors. This led to core meltdowns, hydrogen explosions, and the release of radioactive
-        material into the air and sea.
+      On 11 March 2011 a magnitude 9.0 earthquake caused a massive tsunami that struck Japan’s east coast...
+    </p>
+    <p>
+      Flooding disabled backup generators and cooling systems, leading to core meltdowns in multiple reactors.
+    </p>
+    <p>
+      It remains one of the costliest and most complex nuclear cleanups in history.
     </p>
 
-    <p>
-        The disaster was the largest nuclear crisis since Chernobyl and exposed weaknesses in nuclear plant
-        design, emergency planning, and tsunami protection. Japan was forced to evacuate more than 150,000
-        residents from the surrounding areas.
-    </p>
-
-    <p>
-        Fukushima also had long-lasting social and economic impacts. Thousands of residents lost their homes,
-        farmlands were contaminated, and fishing industries suffered due to radioactive ocean discharge.
-        Cleanup and decommissioning efforts are still ongoing and are expected to continue for decades.
-    </p>
-
-    <h2>Cause of Disaster</h2>
-    <p>
-        Although the reactors automatically shut down during the earthquake, the real problem began when the
-        tsunami flooded the plant. Backup generators located in low-lying areas were destroyed, leaving no
-        electricity to run the cooling pumps. Without cooling, the reactor cores overheated and melted down.
-    </p>
-
-    <p>
-        Multiple hydrogen explosions damaged the outer buildings, spreading radioactive dust into the
-        atmosphere. Unlike Chernobyl, the containment structures remained mostly intact, preventing a larger
-        release, but the damage was still significant.
-    </p>
-
-    <h2>Deaths and Health Effects</h2>
-    <p>
-        There were no immediate radiation deaths. However, over 1,000 people died indirectly due to evacuation
-        stress, disruption of medical treatment, and long-term psychological trauma. Radiation exposure among
-        the public remained relatively low due to rapid evacuation.
-    </p>
-
-    <h2>Major Pollutants Released</h2>
-    <ul>
-        <li>Cesium-134</li>
-        <li>Cesium-137</li>
-        <li>Iodine-131</li>
-        <li>Contaminated seawater (treated but released over years)</li>
-    </ul>
+    <h2>Timeline</h2>
+    <div class="timeline">
+      <div class="event"><div class="date">11 Mar 2011</div><p>Tsunami hits; cooling lost.</p></div>
+      <div class="event"><div class="date">12–15 Mar 2011</div><p>Hydrogen explosions and radiation releases.</p></div>
+      <div class="event"><div class="date">2011–Now</div><p>Large-scale cleanup, water treatment, long-term decommissioning.</p></div>
+    </div>
 
     <h2>Image Gallery</h2>
-
     <div class="gallery">
-        <img src="images/f1.jpg">
-        <img src="images/f2.jpg">
-        <img src="images/f3.jpg">
-        <img src="images/f4.png">
+      <a href="#f1"><img src="images/f1.jpg"></a>
+      <a href="#f2"><img src="images/f2.jpg"></a>
+      <a href="#f3"><img src="images/f3.jpg"></a>
+      <a href="#f4"><img src="images/f4.png"></a>
     </div>
 
     <h2>Heatmap Simulation</h2>
-    <p>
-        The following map displays a simplified plume model showing how radioactive elements may have dispersed
-        from the Fukushima reactors in the days following the tsunami. Wind direction, speed, and atmospheric
-        turbulence strongly influence the spread.
-    </p>
+    <iframe src="fukushima-map.html"></iframe>
 
-    <iframe src="fukushima-map.html" width="100%" height="600px"></iframe>
+  </div>
 
-</div>
+  <!-- Lightboxes -->
+  <div id="f1" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f1.jpg"></div>
+  <div id="f2" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f2.jpg"></div>
+  <div id="f3" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f3.jpg"></div>
+  <div id="f4" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f4.png"></div>
 
 </body>
 </html>
