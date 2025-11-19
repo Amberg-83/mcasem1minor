@@ -1,120 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nuclear Disaster Analysis – Gaussian Plume Simulation</title>
-
+    <title>Nuclear Accidents - Home</title>
     <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background-color: #f5f7fa;
-        }
-
-        /* Navigation Bar */
-        .navbar {
-            background-color: #1f2937;
-            color: white;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .navbar a {
-            color: white;
-            margin-left: 20px;
-            font-size: 18px;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .navbar a:hover {
-            color: #60a5fa;
-        }
-
-        /* Home Content */
-        .container {
-            padding: 40px;
-        }
-
-        .card {
-            background: white;
-            padding: 25px;
-            margin-bottom: 35px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
-        }
-
-        img {
-            width: 100%;
-            border-radius: 12px;
-            margin-bottom: 15px;
-        }
-
-        h1 {
-            color: #111827;
-            font-size: 34px;
-        }
-
-        h2 {
-            color: #1f2937;
-        }
-
-        p {
-            font-size: 18px;
-            color: #374151;
-        }
+        body { font-family: Arial; background-color: #f0f0f0; margin: 0; }
+        .navbar { background-color: #333; padding: 15px; }
+        .navbar a { color: white; margin-right: 20px; text-decoration: none; font-size: 18px; }
+        .container { width: 90%; margin: auto; background: white; padding: 20px; margin-top: 20px; }
+        img { width: 100%; border-radius: 5px; margin-bottom: 15px; }
+        p { font-size: 16px; line-height: 1.6; }
+        h1, h2 { color: #333; }
     </style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-        <div style="font-size: 22px; font-weight: bold;">Nuclear Disaster Analysis</div>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="chernobyl.html">Chernobyl</a>
-            <a href="fukushima.html">Fukushima</a>
-        </div>
-    </div>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="chernobyl.html">Chernobyl</a>
+    <a href="fukushima.html">Fukushima</a>
+</div>
 
-    <!-- HOME PAGE CONTENT -->
-    <div class="container">
+<div class="container">
 
-        <h1>Major Nuclear Accidents: Overview</h1>
+    <h1>Major Nuclear Accidents in History</h1>
 
-        <p>
-            Nuclear accidents are catastrophic failures of nuclear reactors, resulting in the release 
-            of radioactive materials into the environment. Two of the most significant disasters in 
-            human history are the <b>Chernobyl Disaster (1986)</b> and the 
-            <b>Fukushima Daiichi Accident (2011)</b>.
-        </p>
+    <p>
+        Nuclear energy is one of the most powerful sources of electricity, but it comes
+        with significant risks. Although nuclear accidents are extremely rare, the few
+        that have occurred have resulted in environmental destruction, human casualties,
+        and long-term contamination that lasts for decades. This project focuses on the
+        two most severe nuclear disasters in human history: the Chernobyl Disaster of 1986
+        and the Fukushima Daiichi Accident of 2011.
+    </p>
 
-        <!-- CHERNOBYL CARD -->
-        <div class="card">
-            <h2>Chernobyl Nuclear Disaster – 1986</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Chernobyl_Nuclear_Power_Plant.jpg">
-            <p>
-                The Chernobyl disaster occurred in Pripyat, Ukraine due to a failed safety test 
-                that caused a massive explosion in Reactor 4. It released radioactive material 
-                across Europe and remains the worst nuclear accident in history.
-            </p>
-            <a href="chernobyl.html" style="color: #1d4ed8; font-weight: bold;">Read more →</a>
-        </div>
+    <p>
+        The main objective of this project is to present an easy-to-understand visualization
+        of how radioactive material spreads during a nuclear accident. Using the Gaussian Plume
+        Model, we simulate how pollutants like Cesium-137 and Iodine-131 disperse into the
+        atmosphere depending on wind speed, wind direction, and emission intensity.
+    </p>
 
-        <!-- FUKUSHIMA CARD -->
-        <div class="card">
-            <h2>Fukushima Daiichi Nuclear Accident – 2011</h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Fukushima_I_Nuclear_Power_Plant.jpg">
-            <p>
-                Triggered by a massive earthquake and tsunami, the Fukushima Daiichi power plant 
-                suffered reactor meltdowns and hydrogen explosions, releasing radioactive 
-                material into the atmosphere.
-            </p>
-            <a href="fukushima.html" style="color: #1d4ed8; font-weight: bold;">Read more →</a>
-        </div>
+    <p>
+        Through interactive heatmaps and detailed case studies, this website allows users
+        to explore the causes, impact, and consequences of these nuclear disasters. The maps
+        included in each disaster page are generated using Python, NumPy, Folium, and environmental
+        dispersion formulas commonly used in atmospheric research.
+    </p>
 
-    </div>
+    <h2>Chernobyl Nuclear Disaster (Ukraine, 1986)</h2>
+    <img src="https://i.imgur.com/Vzv2yXG.jpeg" alt="Chernobyl Reactor">
+    <p>
+        The explosion at Reactor 4 of the Chernobyl plant is considered the worst nuclear
+        accident ever recorded. The reactor exploded during a safety test, releasing an enormous
+        plume of radioactive material across Europe.
+    </p>
+
+    <h2>Fukushima Daiichi Accident (Japan, 2011)</h2>
+    <img src="https://i.imgur.com/NfKtX9k.jpeg" alt="Fukushima Nuclear Plant">
+    <p>
+        Triggered by a massive earthquake and tsunami, the Fukushima accident caused the meltdown
+        of three reactors, contaminating large portions of the Pacific Ocean and nearby land.
+    </p>
+
+</div>
 
 </body>
 </html>
