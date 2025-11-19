@@ -1,56 +1,194 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nuclear Disaster Case Studies</title>
+    <title>Nuclear Disaster Case Study</title>
+
     <style>
-        body { font-family: Arial; margin: 0; background-color: #f7f7f7; }
-        .navbar { background-color: #222; padding: 15px; }
-        .navbar a { color: white; margin-right: 20px; text-decoration: none; font-size: 18px; }
-        .container { width: 90%; margin: auto; background: white; padding: 20px; margin-top: 20px; }
-        h1, h2 { color: #333; }
-        p { font-size: 17px; line-height: 1.6; }
-        .img-row { display: flex; gap: 10px; margin-top: 20px; }
-        .img-row img { width: 33%; height: 230px; object-fit: cover; border-radius: 5px; }
+        body {
+            font-family: Arial;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #222;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .navbar a {
+            color: white;
+            margin-right: 25px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 90%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        h2 { color: #333; }
+
+        /* INFO CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .cards { grid-template-columns: 1fr; }
+            .gallery { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .gallery { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
     <a href="index.html">Home</a>
     <a href="chernobyl.html">Chernobyl</a>
     <a href="fukushima.html">Fukushima</a>
 </div>
 
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <h1>Nuclear Disaster Case Studies</h1>
+    <p>
+        A comparative study of the two most devastating nuclear disasters in history —
+        the Chernobyl Explosion (1986) and the Fukushima Daiichi Meltdown (2011).
+    </p>
+</div>
+
+
+<!-- MAIN CONTENT -->
 <div class="container">
-    <h1>Major Nuclear Disasters – Case Study Project</h1>
 
+    <h2>About This Project</h2>
     <p>
-        Nuclear disasters remain some of the most devastating events in human history.  
-        They serve as powerful reminders of how technological failure, natural disasters, or human error 
-        can lead to large-scale environmental contamination and long-term health impacts.  
-        This project presents case studies of two of the most significant nuclear accidents:  
-        the **Chernobyl Disaster (1986)** in the Soviet Union and the **Fukushima Daiichi Disaster (2011)** in Japan.
+        Nuclear disasters are catastrophic events that release harmful levels of radioactive material
+        into the environment. Such incidents not only cause immediate destruction but also leave
+        long-term environmental, social, and health impacts on future generations.
     </p>
 
     <p>
-        Both disasters occurred under very different circumstances—Chernobyl due to flawed reactor design and a failed safety test,  
-        and Fukushima due to a massive earthquake followed by a tsunami.  
-        Yet, both resulted in widespread radioactive contamination that affected land, water, animals,  
-        and human settlements for decades. This project compares these incidents and simulates the  
-        radioactive plume spread using Python and Folium.
+        This project focuses on two major nuclear disasters: **Chernobyl** in Ukraine and **Fukushima**
+        in Japan. Both incidents reshaped the global understanding of nuclear energy risks and pushed
+        the world toward stronger safety standards. This website presents detailed information,
+        simulation-based heatmaps, and image galleries to visualize the extent and impact of these events.
     </p>
 
-    <p>
-        Explore each disaster page to view images, heatmap simulations, causes, impacts, pollutants released,  
-        and historical background. These case studies remain essential for understanding nuclear safety  
-        and improving future reactor technologies.
-    </p>
+    <h2>Explore Each Disaster</h2>
 
-    <div class="img-row">
+    <div class="cards">
+        <div class="card">
+            <img src="images/c1.jpg">
+            <h3>👉 Chernobyl Disaster (1986)</h3>
+            <p>
+                A reactor explosion in Ukraine caused the largest nuclear accident in world history.
+                Learn about the cause, deaths, pollutants, and radioactive plume spread.
+            </p>
+            <a href="chernobyl.html" style="color:#1e3c72; font-weight:bold;">View Details →</a>
+        </div>
+
+        <div class="card">
+            <img src="images/f1.jpg">
+            <h3>👉 Fukushima Disaster (2011)</h3>
+            <p>
+                Triggered by a massive tsunami, Fukushima witnessed multiple reactor meltdowns.
+                Explore the timeline, causes, radiation impact, and heatmap simulation.
+            </p>
+            <a href="fukushima.html" style="color:#1e3c72; font-weight:bold;">View Details →</a>
+        </div>
+    </div>
+
+    <h2>Gallery Preview</h2>
+
+    <div class="gallery">
         <img src="images/c1.jpg">
-        <img src="images/f1.jpg">
-        <img src="images/c2.jpg">
+        <img src="images/f2.jpg">
+        <img src="images/c3.jpg">
     </div>
 
 </div>
