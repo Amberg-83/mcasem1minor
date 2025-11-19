@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chernobyl Disaster – Gaussian Plume Case Study</title>
-
+    <title>Chernobyl Disaster</title>
     <style>
-        body { margin: 0; font-family: "Segoe UI"; background: #f5f7fa; }
-        .navbar { background: #1f2937; color: white; padding: 15px 40px; display: flex; justify-content: space-between; }
-        .navbar a { color: white; margin-left: 20px; font-size: 18px; text-decoration: none; }
-        .navbar a:hover { color: #60a5fa; }
-
-        .container { padding: 40px; }
-        .card { background: white; padding: 25px; border-radius: 12px; margin-bottom: 35px; box-shadow: 0px 4px 16px rgba(0,0,0,0.1); }
-
-        h1, h2 { color: #1f2937; }
-        p { font-size: 18px; color: #374151; }
-
-        img { width: 100%; border-radius: 12px; margin-bottom: 15px; }
-        iframe { width: 100%; height: 600px; border-radius: 12px; border: none; }
+        body { font-family: Arial; background-color: #f0f0f0; margin: 0; }
+        .navbar { background-color: #333; padding: 15px; }
+        .navbar a { color: white; margin-right: 20px; text-decoration: none; font-size: 18px; }
+        .container { width: 90%; margin: auto; background: white; padding: 20px; margin-top: 20px; }
+        img { width: 100%; border-radius: 5px; margin-bottom: 15px; }
+        iframe { width: 100%; height: 600px; border: 1px solid #ccc; margin-top: 20px; }
+        p { font-size: 16px; line-height: 1.6; }
+        h1, h2 { color: #333; }
     </style>
 </head>
 
 <body>
 
-    <div class="navbar">
-        <div style="font-size:22px; font-weight:bold;">Chernobyl Disaster</div>
-        <div>
-            <a href="index.html">Home</a>
-            <a href="chernobyl.html">Chernobyl</a>
-            <a href="fukushima.html">Fukushima</a>
-        </div>
-    </div>
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="chernobyl.html">Chernobyl</a>
+    <a href="fukushima.html">Fukushima</a>
+</div>
 
-    <div class="container">
+<div class="container">
 
-        <h1>Chernobyl Nuclear Disaster (1986)</h1>
+    <h1>Chernobyl Nuclear Disaster (1986)</h1>
 
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Chernobyl_Nuclear_Power_Plant.jpg">
-            <p>
-                The Chernobyl disaster occurred on <b>26 April 1986</b> in Reactor 4 of the Chernobyl Nuclear 
-                Power Plant in Pripyat, Ukraine. A failed safety experiment caused a steam explosion, 
-                releasing enormous amounts of radiation.
-            </p>
+    <!-- Safe image link -->
+    <img src="https://i.imgur.com/i2MWiW8.jpeg" alt="Chernobyl Nuclear Plant">
 
-            <h3>Cause:</h3>
-            <p>Reactor design flaw + operator errors during safety test.</p>
+    <h2>Cause of Disaster</h2>
+    <p>
+        The Chernobyl disaster occurred on April 26, 1986, when Reactor 4 at the Chernobyl
+        Nuclear Power Plant in northern Ukraine exploded during a late-night safety test.
+        A combination of design flaws in the RBMK reactor and critical operator mistakes
+        led to an uncontrollable surge of energy, causing a massive steam explosion followed
+        by a nuclear fire that burned for 10 days.
+    </p>
 
-            <h3>Deaths:</h3>
-            <p>About <b>31 immediate deaths</b>; long-term deaths estimated between <b>4,000–30,000</b>.</p>
+    <p>
+        The explosion ejected radioactive material into the atmosphere, contaminating
+        large parts of Ukraine, Belarus, and Russia. The Soviet Union initially attempted
+        to hide the disaster, but radiation sensors in Sweden detected abnormal levels,
+        forcing the government to acknowledge the accident publicly. The lack of immediate
+        evacuation contributed to large-scale radiation exposure.
+    </p>
 
-            <h3>Pollutants Released:</h3>
-            <ul>
-                <li>Iodine-131</li>
-                <li>Cesium-137</li>
-                <li>Strontium-90</li>
-                <li>Xenon-133</li>
-            </ul>
+    <p>
+        Over 600,000 workers, known as “liquidators,” were involved in cleaning the
+        surrounding area and constructing the original concrete sarcophagus around the
+        reactor. The entire city of Pripyat was abandoned, creating one of the world’s
+        most famous ghost towns. The disaster is considered the worst nuclear accident
+        in history, classified as Level 7 on the INES scale.
+    </p>
 
-            <h3>Gaussian Plume Heatmap:</h3>
-            <iframe src="chernobyl-map.html"></iframe>
+    <h2>Deaths</h2>
+    <p>
+        Immediate deaths: 31  
+        Estimated long-term deaths (cancer): 4,000 to 30,000  
+        Affected population: over 5 million people across Europe
+    </p>
 
-        </div>
+    <h2>Major Pollutants Released</h2>
+    <ul>
+        <li>Iodine-131</li>
+        <li>Cesium-137</li>
+        <li>Strontium-90</li>
+        <li>Plutonium isotopes</li>
+    </ul>
 
-    </div>
+    <h2>Radioactive Plume Heatmap</h2>
+    <p>
+        The heatmap below displays the estimated spread of radioactive material using a
+        Gaussian Plume Model. This simulation illustrates how wind speed, direction,
+        and emission strength affected the contamination pattern around Eastern Europe.
+    </p>
+
+    <iframe src="chernobyl-map.html"></iframe>
+
+</div>
 
 </body>
 </html>
