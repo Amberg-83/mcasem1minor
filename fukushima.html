@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fukushima Disaster</title>
+    <title>Chernobyl Disaster</title>
     <style>
-        body { font-family: Arial; background-color: #f0f0f0; margin: 0; }
-        .navbar { background-color: #333; padding: 15px; }
+        body { font-family: Arial; margin: 0; background-color: #f2f2f2; }
+        .navbar { background-color: #222; padding: 15px; }
         .navbar a { color: white; margin-right: 20px; text-decoration: none; font-size: 18px; }
         .container { width: 90%; margin: auto; background: white; padding: 20px; margin-top: 20px; }
-        img { width: 100%; border-radius: 5px; margin-bottom: 15px; }
-        iframe { width: 100%; height: 600px; border: 1px solid #ccc; margin-top: 20px; }
-        p { font-size: 16px; line-height: 1.6; }
+        img { width: 100%; border-radius: 5px; margin-top: 15px; }
         h1, h2 { color: #333; }
+        p { font-size: 17px; line-height: 1.6; }
     </style>
 </head>
 
@@ -24,60 +23,37 @@
 
 <div class="container">
 
-    <h1>Fukushima Daiichi Nuclear Accident (2011)</h1>
+    <h1>Chernobyl Nuclear Disaster (1986)</h1>
 
-    <!-- NEW SAFE IMAGE LINK -->
-    <img src="https://i.imgur.com/2HOl4fq.jpeg" alt="Fukushima Nuclear Plant">
+    <img src="images/c1.jpg">
+    <img src="images/c2.jpg">
+    <img src="images/c3.jpg">
+    <img src="images/c4.jpg">
 
-    <h2>Cause of Disaster</h2>
-
+    <h2>Overview</h2>
     <p>
-        The Fukushima Daiichi nuclear accident occurred on March 11, 2011, after a massive
-        9.0 magnitude earthquake struck the northeastern coast of Japan. The earthquake triggered
-        a powerful tsunami with waves reaching up to 15 meters high, overwhelming the plant’s
-        seawall and flooding the emergency generators. As a result, the cooling systems failed,
-        leading to overheating and the meltdown of three reactors.
+        The Chernobyl disaster occurred on April 26, 1986, at the Chernobyl Nuclear Power Plant in Ukraine
+        (then part of the Soviet Union). A late-night safety test went wrong, resulting in a steam explosion
+        and fire that released massive amounts of radioactive material into the atmosphere. It is considered
+        the worst nuclear accident in history.
     </p>
 
     <p>
-        The loss of electrical power—both external grid power and internal backup generators—
-        caused the nuclear fuel rods to heat uncontrollably. Hydrogen gas built up inside the reactor units,
-        resulting in a series of explosions that damaged the reactor buildings. The failure to maintain
-        cooling allowed radioactive materials to escape into the atmosphere and surrounding seawater,
-        creating long-term contamination.
+        The explosion destroyed Reactor 4 completely, scattering radioactive graphite and fuel
+        particles across the region. Emergency workers, firefighters, and plant staff were exposed
+        to extremely high radiation levels while attempting to control the fire and prevent further explosions.
+        The radioactive plume spread across Europe, contaminating land for thousands of kilometers.
     </p>
 
     <p>
-        Although the plant workers, known as the “Fukushima 50,” worked tirelessly to contain the situation,
-        the event became one of the worst nuclear disasters in history. The Japanese government declared
-        a nuclear emergency and evacuated more than 160,000 people from the region, many of whom could
-        not return even years later due to radioactive contamination.
+        Long-term effects included cancer cases, genetic disorders, wildlife mutations,
+        and the creation of the 2,600 km² Exclusion Zone. The disaster highlighted major flaws in reactor design,
+        safety culture, and emergency preparedness. Today, Chernobyl remains a symbol of the catastrophic risks
+        associated with nuclear power mismanagement.
     </p>
 
-    <h2>Deaths</h2>
-    <p>
-        Immediate radiation deaths: 0  
-        Indirect disaster-related deaths (evacuation stress, delayed medical care): 1,000+  
-        Long-term radiation-related deaths remain under study.
-    </p>
-
-    <h2>Major Pollutants Released</h2>
-    <ul>
-        <li>Cesium-134</li>
-        <li>Cesium-137</li>
-        <li>Iodine-131</li>
-        <li>Strontium-90 (trace amounts)</li>
-    </ul>
-
-    <h2>Radioactive Plume Heatmap</h2>
-    <p>
-        The heatmap below shows the simulated dispersion of radioactive pollutants using the Gaussian
-        Plume Model. This model estimates how radiation spreads into the atmosphere based on wind
-        speed, wind direction, emission strength, and release height.
-    </p>
-
-    <!-- Your generated heatmap -->
-    <iframe src="fukushima-map.html"></iframe>
+    <h2>Heatmap Simulation</h2>
+    <iframe src="chernobyl-map.html" style="width:100%; height:600px;"></iframe>
 
 </div>
 
