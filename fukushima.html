@@ -7,9 +7,9 @@
         .navbar { background-color: #333; padding: 15px; }
         .navbar a { color: white; margin-right: 20px; text-decoration: none; font-size: 18px; }
         .container { width: 90%; margin: auto; background: white; padding: 20px; margin-top: 20px; }
-        img { width: 100%; border-radius: 5px; }
+        img { width: 100%; border-radius: 5px; margin-bottom: 15px; }
         iframe { width: 100%; height: 600px; border: 1px solid #ccc; margin-top: 20px; }
-        p { font-size: 16px; }
+        p { font-size: 16px; line-height: 1.6; }
         h1, h2 { color: #333; }
     </style>
 </head>
@@ -26,18 +26,39 @@
 
     <h1>Fukushima Daiichi Nuclear Accident (2011)</h1>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Fukushima_I_Nuclear_Power_Plant.jpg">
+    <!-- NEW SAFE IMAGE LINK -->
+    <img src="https://i.imgur.com/2HOl4fq.jpeg" alt="Fukushima Nuclear Plant">
 
     <h2>Cause of Disaster</h2>
+
     <p>
-        A 9.0 magnitude earthquake followed by a massive tsunami caused a total power failure,
-        leading to reactor meltdowns at the Fukushima Daiichi nuclear plant.
+        The Fukushima Daiichi nuclear accident occurred on March 11, 2011, after a massive
+        9.0 magnitude earthquake struck the northeastern coast of Japan. The earthquake triggered
+        a powerful tsunami with waves reaching up to 15 meters high, overwhelming the plant’s
+        seawall and flooding the emergency generators. As a result, the cooling systems failed,
+        leading to overheating and the meltdown of three reactors.
+    </p>
+
+    <p>
+        The loss of electrical power—both external grid power and internal backup generators—
+        caused the nuclear fuel rods to heat uncontrollably. Hydrogen gas built up inside the reactor units,
+        resulting in a series of explosions that damaged the reactor buildings. The failure to maintain
+        cooling allowed radioactive materials to escape into the atmosphere and surrounding seawater,
+        creating long-term contamination.
+    </p>
+
+    <p>
+        Although the plant workers, known as the “Fukushima 50,” worked tirelessly to contain the situation,
+        the event became one of the worst nuclear disasters in history. The Japanese government declared
+        a nuclear emergency and evacuated more than 160,000 people from the region, many of whom could
+        not return even years later due to radioactive contamination.
     </p>
 
     <h2>Deaths</h2>
     <p>
-        Immediate radiation deaths: 0<br>
-        Indirect disaster-related deaths: 1,000+ (evacuation stress, medical issues)
+        Immediate radiation deaths: 0  
+        Indirect disaster-related deaths (evacuation stress, delayed medical care): 1,000+  
+        Long-term radiation-related deaths remain under study.
     </p>
 
     <h2>Major Pollutants Released</h2>
@@ -45,11 +66,17 @@
         <li>Cesium-134</li>
         <li>Cesium-137</li>
         <li>Iodine-131</li>
+        <li>Strontium-90 (trace amounts)</li>
     </ul>
 
     <h2>Radioactive Plume Heatmap</h2>
-    <p>This map shows the simulated spread of radioactive material from the Fukushima reactors.</p>
+    <p>
+        The heatmap below shows the simulated dispersion of radioactive pollutants using the Gaussian
+        Plume Model. This model estimates how radiation spreads into the atmosphere based on wind
+        speed, wind direction, emission strength, and release height.
+    </p>
 
+    <!-- Your generated heatmap -->
     <iframe src="fukushima-map.html"></iframe>
 
 </div>
