@@ -2,14 +2,43 @@
 <html>
 <head>
     <title>Fukushima Disaster</title>
+
     <style>
-        body { font-family: Arial; margin: 0; background-color: #f2f2f2; }
-        .navbar { background-color: #222; padding: 15px; }
+        body { font-family: Arial; background-color: #f5f5f5; margin: 0; }
+        .navbar { background-color: #333; padding: 15px; }
         .navbar a { color: white; margin-right: 20px; text-decoration: none; font-size: 18px; }
+
         .container { width: 90%; margin: auto; background: white; padding: 20px; margin-top: 20px; }
-        img { width: 100%; border-radius: 5px; margin-top: 15px; }
         h1, h2 { color: #333; }
-        p { font-size: 17px; line-height: 1.6; }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .gallery { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 480px) {
+            .gallery { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 
@@ -25,33 +54,72 @@
 
     <h1>Fukushima Daiichi Nuclear Disaster (2011)</h1>
 
-    <img src="images/f1.jpg">
-    <img src="images/f2.jpg">
-    <img src="images/f3.jpg">
-    <img src="images/f4.png">
-
-    <h2>Overview</h2>
+    <h2>Background</h2>
     <p>
-        The Fukushima disaster occurred on March 11, 2011, after a 9.0 magnitude earthquake
-        triggered a massive tsunami along Japan’s eastern coast. The tsunami flooded the Fukushima Daiichi
-        Nuclear Power Plant, disabling the cooling systems of three reactors and leading to hydrogen explosions
-        and reactor meltdowns.
+        The Fukushima Daiichi nuclear disaster occurred on March 11, 2011, after a powerful 9.0 magnitude
+        earthquake struck Japan. The earthquake triggered a massive tsunami that overwhelmed the coastal
+        defenses of the nuclear power plant, cutting off power and disabling critical cooling systems in
+        three reactors. This led to core meltdowns, hydrogen explosions, and the release of radioactive
+        material into the air and sea.
     </p>
 
     <p>
-        Although immediate radiation-related deaths were not recorded, over 1,000 indirect deaths occurred due to
-        evacuation stress and medical complications. The disaster caused significant contamination of air, soil,
-        and coastal waters. Radioactive materials such as Cesium-134, Cesium-137, and Iodine-131 were released.
+        The disaster was the largest nuclear crisis since Chernobyl and exposed weaknesses in nuclear plant
+        design, emergency planning, and tsunami protection. Japan was forced to evacuate more than 150,000
+        residents from the surrounding areas.
     </p>
 
     <p>
-        Fukushima raised concerns about nuclear safety worldwide, particularly regarding plants located in
-        earthquake-prone regions. Japan implemented new safety regulations, and the disaster continues to influence
-        global discussions about nuclear energy, emergency planning, and sustainable alternatives.
+        Fukushima also had long-lasting social and economic impacts. Thousands of residents lost their homes,
+        farmlands were contaminated, and fishing industries suffered due to radioactive ocean discharge.
+        Cleanup and decommissioning efforts are still ongoing and are expected to continue for decades.
     </p>
+
+    <h2>Cause of Disaster</h2>
+    <p>
+        Although the reactors automatically shut down during the earthquake, the real problem began when the
+        tsunami flooded the plant. Backup generators located in low-lying areas were destroyed, leaving no
+        electricity to run the cooling pumps. Without cooling, the reactor cores overheated and melted down.
+    </p>
+
+    <p>
+        Multiple hydrogen explosions damaged the outer buildings, spreading radioactive dust into the
+        atmosphere. Unlike Chernobyl, the containment structures remained mostly intact, preventing a larger
+        release, but the damage was still significant.
+    </p>
+
+    <h2>Deaths and Health Effects</h2>
+    <p>
+        There were no immediate radiation deaths. However, over 1,000 people died indirectly due to evacuation
+        stress, disruption of medical treatment, and long-term psychological trauma. Radiation exposure among
+        the public remained relatively low due to rapid evacuation.
+    </p>
+
+    <h2>Major Pollutants Released</h2>
+    <ul>
+        <li>Cesium-134</li>
+        <li>Cesium-137</li>
+        <li>Iodine-131</li>
+        <li>Contaminated seawater (treated but released over years)</li>
+    </ul>
+
+    <h2>Image Gallery</h2>
+
+    <div class="gallery">
+        <img src="images/f1.jpg">
+        <img src="images/f2.jpg">
+        <img src="images/f3.jpg">
+        <img src="images/f4.png">
+    </div>
 
     <h2>Heatmap Simulation</h2>
-    <iframe src="fukushima-map.html" style="width:100%; height:600px;"></iframe>
+    <p>
+        The following map displays a simplified plume model showing how radioactive elements may have dispersed
+        from the Fukushima reactors in the days following the tsunami. Wind direction, speed, and atmospheric
+        turbulence strongly influence the spread.
+    </p>
+
+    <iframe src="fukushima-map.html" width="100%" height="600px"></iframe>
 
 </div>
 
