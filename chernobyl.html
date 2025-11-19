@@ -11,8 +11,24 @@
       background:#111;
       padding:20px 0;
       border-bottom:2px solid #333;
+      position:relative;
     }
     .header h1 { color:#ffd700; font-size:28px; font-weight:800; }
+
+    /* Home button */
+    .home-btn {
+      position:absolute;
+      right:20px;
+      top:20px;
+      background:#ffd700;
+      padding:8px 14px;
+      color:#000;
+      font-weight:bold;
+      border-radius:6px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+    .home-btn:hover { background:#e5c100; }
 
     .container {
       max-width:1100px; margin:30px auto;
@@ -22,14 +38,15 @@
     }
 
     h2 { color:#ffd700; margin-bottom:10px; }
-    p { margin-bottom:14px; }
+    p { margin-bottom:14px; line-height:1.7; }
 
     .timeline {
       margin:22px auto; padding-left:18px;
-      border-left:3px solid #333; max-width:900px; text-align:left;
+      border-left:3px solid #333; max-width:900px;
+      text-align:left;
     }
     .event { margin-bottom:16px; }
-    .date { color:#ffd700; font-weight:700; margin-bottom:6px; }
+    .date { color:#ffd700; font-weight:700; }
 
     .gallery {
       display:grid;
@@ -44,68 +61,89 @@
     .gallery img:hover { transform:scale(1.05); }
 
     .lightbox {
-      display:none; position:fixed;
-      top:0; left:0;
+      display:none; position:fixed; top:0; left:0;
       width:100%; height:100%;
       background:rgba(0,0,0,0.85);
       justify-content:center; align-items:center;
     }
     .lightbox:target { display:flex; }
 
-    .lightbox img {
-      max-width:90%; max-height:90%;
-      border-radius:8px;
-    }
+    .lightbox img { max-width:90%; max-height:90%; border-radius:8px; }
 
     .close {
       position:absolute; top:20px; right:20px;
       background:#0007; padding:5px 10px;
-      color:#fff; font-size:26px; text-decoration:none;
-      border-radius:6px;
+      color:#fff; font-size:26px;
+      text-decoration:none; border-radius:6px;
     }
 
     iframe {
       width:100%; height:600px;
-      border-radius:6px; border:1px solid #333;
+      border-radius:8px; border:1px solid #333;
       margin-top:20px;
     }
 
     @media(max-width:900px){
-      .gallery { grid-template-columns:repeat(2,1fr); }
+      .gallery { grid-template-columns:1fr 1fr; }
     }
     @media(max-width:550px){
       .gallery { grid-template-columns:1fr; }
     }
   </style>
-
 </head>
+
 <body>
 
   <div class="header">
     <h1>CHERNOBYL — 1986</h1>
+    <a href="index.html" class="home-btn">Home</a>
   </div>
 
   <div class="container">
 
     <h2>Overview & Context</h2>
+
     <p>
-      On 26 April 1986 Reactor 4 at the Chernobyl Nuclear Power Plant exploded during a late-night safety test...
+      The Chernobyl disaster of April 26, 1986, is widely regarded as the worst nuclear accident in world history. 
+      It occurred during a late-night safety test at Reactor No. 4 of the Chernobyl Nuclear Power Plant in Ukraine, 
+      which was then part of the Soviet Union. Due to a flawed reactor design and a series of operational mistakes, 
+      operators disabled critical safety systems, causing a sudden and uncontrollable power surge. This led to a massive 
+      steam explosion that destroyed the reactor core and blew off the thousand-ton concrete lid, releasing radioactive 
+      material high into the atmosphere. Fires erupted across the facility, further accelerating the spread of radioactive dust.
     </p>
 
     <p>
-      The accident combined reactor design flaws and operator errors. The explosion released massive radioactive material...
+      First responders, including firefighters and plant workers, were exposed to lethal doses of radiation within minutes 
+      without being properly informed of the danger. The nearby town of Pripyat, home to nearly 50,000 people, continued 
+      normal life for an entire day after the explosion because authorities delayed evacuation. Residents were finally 
+      moved out 36 hours later, but thousands had already received significant exposure to radionuclides such as iodine-131 
+      and cesium-137. Over the next weeks, dozens of workers died from acute radiation syndrome, and more than 100,000 people 
+      from nearby regions were permanently relocated to create a 30-km exclusion zone.
     </p>
 
     <p>
-      Long-term consequences include an exclusion zone, increased cancer cases, and worldwide nuclear policy changes.
+      The environmental and long-term health impacts were severe. Radioactive contamination spread across Ukraine, Belarus, 
+      Russia, and parts of Europe. Farmland, forests, and rivers absorbed high levels of radiation, and certain areas may 
+      remain unsafe for centuries. Thousands of cases of thyroid cancer—especially among children—have been linked to the 
+      radioactive iodine released during the disaster. Economically and socially, the accident caused immense disruption, 
+      forcing communities to abandon homes, farms, and entire towns that now remain frozen in time. The psychological impact 
+      of sudden displacement, fear, and isolation still affects survivors today.
+    </p>
+
+    <p>
+      In the years that followed, Chernobyl became a global symbol of nuclear risk and the need for strict safety culture. 
+      International agencies introduced stronger reactor design requirements, independent safety oversight, and mandatory stress tests. 
+      The original concrete sarcophagus built in 1986 deteriorated quickly, leading to the construction of the New Safe Confinement, 
+      completed in 2016, which is designed to seal the reactor for the next century. Today, Chernobyl stands not only as a 
+      historical tragedy but also as a lesson for nations developing or operating nuclear power plants.
     </p>
 
     <h2>Timeline of Events</h2>
     <div class="timeline">
-      <div class="event"><div class="date">26 Apr 1986</div><p>Reactor explosion & massive release of radioactive materials.</p></div>
-      <div class="event"><div class="date">27 Apr 1986</div><p>Evacuation of Pripyat.</p></div>
-      <div class="event"><div class="date">1986–1987</div><p>Construction of sarcophagus and cleanup.</p></div>
-      <div class="event"><div class="date">2016</div><p>New steel confinement structure installed.</p></div>
+      <div class="event"><div class="date">26 April 1986</div><p>Reactor explosion and radioactive release.</p></div>
+      <div class="event"><div class="date">27 April 1986</div><p>Pripyat evacuated.</p></div>
+      <div class="event"><div class="date">1986–87</div><p>Cleanup and sarcophagus construction.</p></div>
+      <div class="event"><div class="date">2016</div><p>New Safe Confinement installed.</p></div>
     </div>
 
     <h2>Image Gallery</h2>
@@ -121,7 +159,6 @@
 
   </div>
 
-  <!-- Lightboxes -->
   <div id="c1" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c1.jpg"></div>
   <div id="c2" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c2.jpg"></div>
   <div id="c3" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c3.jpg"></div>
