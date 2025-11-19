@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nuclear Disaster Analysis – Gaussian Plume Simulation</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f5f7fa;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #1f2937;
+            color: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            margin-left: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .navbar a:hover {
+            color: #60a5fa;
+        }
+
+        /* Home Content */
+        .container {
+            padding: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 35px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #111827;
+            font-size: 34px;
+        }
+
+        h2 {
+            color: #1f2937;
+        }
+
+        p {
+            font-size: 18px;
+            color: #374151;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div style="font-size: 22px; font-weight: bold;">Nuclear Disaster Analysis</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="chernobyl.html">Chernobyl</a>
+            <a href="fukushima.html">Fukushima</a>
+        </div>
+    </div>
+
+    <!-- HOME PAGE CONTENT -->
+    <div class="container">
+
+        <h1>Major Nuclear Accidents: Overview</h1>
+
+        <p>
+            Nuclear accidents are catastrophic failures of nuclear reactors, resulting in the release 
+            of radioactive materials into the environment. Two of the most significant disasters in 
+            human history are the <b>Chernobyl Disaster (1986)</b> and the 
+            <b>Fukushima Daiichi Accident (2011)</b>.
+        </p>
+
+        <!-- CHERNOBYL CARD -->
+        <div class="card">
+            <h2>Chernobyl Nuclear Disaster – 1986</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Chernobyl_Nuclear_Power_Plant.jpg">
+            <p>
+                The Chernobyl disaster occurred in Pripyat, Ukraine due to a failed safety test 
+                that caused a massive explosion in Reactor 4. It released radioactive material 
+                across Europe and remains the worst nuclear accident in history.
+            </p>
+            <a href="chernobyl.html" style="color: #1d4ed8; font-weight: bold;">Read more →</a>
+        </div>
+
+        <!-- FUKUSHIMA CARD -->
+        <div class="card">
+            <h2>Fukushima Daiichi Nuclear Accident – 2011</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Fukushima_I_Nuclear_Power_Plant.jpg">
+            <p>
+                Triggered by a massive earthquake and tsunami, the Fukushima Daiichi power plant 
+                suffered reactor meltdowns and hydrogen explosions, releasing radioactive 
+                material into the atmosphere.
+            </p>
+            <a href="fukushima.html" style="color: #1d4ed8; font-weight: bold;">Read more →</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
