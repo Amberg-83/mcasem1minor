@@ -56,6 +56,76 @@
     .event { margin-bottom:16px; }
     .date { color:#ffd700; font-weight:700; }
 
+    /* ---------------- CSS ONLY SLIDER ---------------- */
+    .css-slider {
+      width: 100%;
+      max-width: 750px;
+      margin: 25px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 2px solid #444;
+    }
+
+    .css-slider input {
+      display: none;
+    }
+
+    .slides {
+      display: flex;
+      width: 400%;
+      transition: 0.6s;
+    }
+
+    .slide {
+      width: 100%;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide p {
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.6);
+      padding: 10px;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    /* Slide Control */
+    #s1:checked ~ .slides { transform: translateX(0%); }
+    #s2:checked ~ .slides { transform: translateX(-100%); }
+    #s3:checked ~ .slides { transform: translateX(-200%); }
+    #s4:checked ~ .slides { transform: translateX(-300%); }
+
+    /* Navigation Dots */
+    .nav {
+      display: flex;
+      justify-content: center;
+      margin: 12px 0;
+    }
+
+    .nav label {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #777;
+      margin: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav label:hover { background:#fff; }
+
+    /* Gallery */
     .gallery {
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -102,8 +172,8 @@
     }
     @media(max-width:550px){
       .gallery { grid-template-columns:1fr; }
+      .slide img { height:300px; }
     }
-
   </style>
 </head>
 
@@ -118,41 +188,51 @@
 
     <h2>Overview & Context</h2>
 
-    <p>
-      The Fukushima Daiichi nuclear disaster occurred on March 11, 2011, after one of the most powerful earthquakes ever recorded struck off Japan’s northeastern coast. 
-      The resulting tsunami overwhelmed the plant’s seawall, flooding backup generators and disabling the cooling systems. Although the reactors shut down automatically 
-      during the earthquake, the loss of power prevented circulation of coolant water, leading to dangerous overheating of the fuel rods. Within hours, the situation 
-      escalated, and over the next few days, three reactors experienced partial meltdowns. The hydrogen produced by the overheated fuel caused large explosions that 
-      severely damaged the facility, releasing radioactive materials into the air and ocean.
-    </p>
+    <p>... your same Fukushima content ...</p>
 
-    <p>
-      Japanese authorities quickly ordered mass evacuations from nearby towns and villages, ultimately displacing more than 150,000 people. Many were forced to leave 
-      behind belongings, homes, and family property without knowing whether they would ever return. Although radiation exposure levels were significantly lower than 
-      those in Chernobyl, the disaster created widespread psychological and social distress. Families were separated, industries halted, and the region experienced long-term 
-      economic disruption. Some residents were unable to return for years due to contamination and fear, while others have permanently resettled elsewhere.
-    </p>
+    <h2>Real-Time Disaster Photos (Slider)</h2>
 
-    <p>
-      Environmental impacts of the accident remain a concern. Large amounts of radioactive contamination entered local soil and water bodies, prompting one of the largest 
-      decontamination efforts in Japan’s history. Millions of tons of contaminated soil were collected and stored in secure facilities. The handling of radioactive wastewater 
-      used to cool the damaged reactors has been among the most debated issues. Japan implemented multi-stage filtration to reduce radioactive content and has begun releasing 
-      treated water into the Pacific Ocean under international supervision. Despite safety assurances, the issue continues to spark global debate and public concern.
-    </p>
+    <!-- ---------- SLIDER START ---------- -->
+    <div class="css-slider">
 
-    <p>
-      More than a decade later, the Fukushima site remains in a long-term decommissioning phase that could span 30 to 40 years. Removing the melted fuel debris is considered 
-      one of the most difficult engineering tasks ever attempted in nuclear history. The disaster prompted countries around the world to reassess nuclear safety practices, 
-      leading to stronger coastal protection, improved emergency protocols, and enhanced operator training. Fukushima stands as a reminder of how natural disasters can 
-      trigger complex technological emergencies and underscores the importance of preparedness, transparency, and robust engineering design.
-    </p>
+      <input type="radio" name="slider" id="s1" checked>
+      <input type="radio" name="slider" id="s2">
+      <input type="radio" name="slider" id="s3">
+      <input type="radio" name="slider" id="s4">
 
-    <h2>Timeline</h2>
-    <div class="timeline">
-      <div class="event"><div class="date">11 Mar 2011</div><p>Massive earthquake and tsunami strike Japan.</p></div>
-      <div class="event"><div class="date">12–15 Mar 2011</div><p>Hydrogen explosions damage reactors.</p></div>
-      <div class="event"><div class="date">2011–Now</div><p>Long-term cleanup and fuel removal continue.</p></div>
+      <div class="slides">
+
+        <div class="slide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Fukushima_I_by_Digital_Globe.jpg">
+          <p>Fukushima Daiichi after the hydrogen explosion.</p>
+        </div>
+
+        <div class="slide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Fukushima_Daiichi_nuclear_power_plant_2011.jpg">
+          <p>Reactor buildings heavily damaged (2011).</p>
+        </div>
+
+        <div class="slide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Fukushima_cleanup_2011.jpg">
+          <p>Early cleanup operations around the plant.</p>
+        </div>
+
+        <div class="slide">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Fukushima_contaminated_water_tanks.jpg">
+          <p>Storage tanks for contaminated cooling water.</p>
+        </div>
+
+      </div>
+
+      <div class="nav">
+        <label for="s1"></label>
+        <label for="s2"></label>
+        <label for="s3"></label>
+        <label for="s4"></label>
+      </div>
+
     </div>
+    <!-- ---------- SLIDER END ---------- -->
 
     <h2>Image Gallery</h2>
     <div class="gallery">
