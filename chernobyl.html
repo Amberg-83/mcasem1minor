@@ -15,6 +15,7 @@
     }
     .header h1 { color:#ffd700; font-size:28px; font-weight:800; }
 
+    /* Home button */
     .home-btn {
       position:absolute;
       right:20px;
@@ -47,77 +48,6 @@
     .event { margin-bottom:16px; }
     .date { color:#ffd700; font-weight:700; }
 
-    /* ----------- CSS-Only Slider ----------- */
-
-    .css-slider {
-      width: 100%;
-      max-width: 750px;
-      margin: 25px auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      border: 2px solid #444;
-    }
-
-    .css-slider input {
-      display: none;
-    }
-
-    .slides {
-      display: flex;
-      width: 400%;
-      transition: 0.6s;
-    }
-
-    .slide {
-      width: 100%;
-      position: relative;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .slide p {
-      position: absolute;
-      bottom: 12px;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.6);
-      padding: 10px;
-      color: #fff;
-      font-size: 16px;
-    }
-
-    /* Slide Movement */
-    #s1:checked ~ .slides { transform: translateX(0%); }
-    #s2:checked ~ .slides { transform: translateX(-100%); }
-    #s3:checked ~ .slides { transform: translateX(-200%); }
-    #s4:checked ~ .slides { transform: translateX(-300%); }
-
-    /* Navigation Dots */
-    .nav {
-      display: flex;
-      justify-content: center;
-      margin: 12px 0;
-    }
-
-    .nav label {
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      background: #777;
-      margin: 6px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .nav label:hover { background:#fff; }
-
-    /* Gallery */
     .gallery {
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -158,9 +88,7 @@
     }
     @media(max-width:550px){
       .gallery { grid-template-columns:1fr; }
-      .slide img { height:300px; }
     }
-
   </style>
 </head>
 
@@ -175,55 +103,48 @@
 
     <h2>Overview & Context</h2>
 
-    <p>The Chernobyl disaster of April 26, 1986, is widely regarded as the worst nuclear accident in world history...</p>
+    <p>
+      The Chernobyl disaster of April 26, 1986, is widely regarded as the worst nuclear accident in world history. 
+      It occurred during a late-night safety test at Reactor No. 4 of the Chernobyl Nuclear Power Plant in Ukraine, 
+      which was then part of the Soviet Union. Due to a flawed reactor design and a series of operational mistakes, 
+      operators disabled critical safety systems, causing a sudden and uncontrollable power surge. This led to a massive 
+      steam explosion that destroyed the reactor core and blew off the thousand-ton concrete lid, releasing radioactive 
+      material high into the atmosphere. Fires erupted across the facility, further accelerating the spread of radioactive dust.
+    </p>
 
-    <p>First responders, including firefighters and plant workers, were exposed to lethal doses of radiation...</p>
+    <p>
+      First responders, including firefighters and plant workers, were exposed to lethal doses of radiation within minutes 
+      without being properly informed of the danger. The nearby town of Pripyat, home to nearly 50,000 people, continued 
+      normal life for an entire day after the explosion because authorities delayed evacuation. Residents were finally 
+      moved out 36 hours later, but thousands had already received significant exposure to radionuclides such as iodine-131 
+      and cesium-137. Over the next weeks, dozens of workers died from acute radiation syndrome, and more than 100,000 people 
+      from nearby regions were permanently relocated to create a 30-km exclusion zone.
+    </p>
 
-    <p>The environmental and long-term health impacts were severe...</p>
+    <p>
+      The environmental and long-term health impacts were severe. Radioactive contamination spread across Ukraine, Belarus, 
+      Russia, and parts of Europe. Farmland, forests, and rivers absorbed high levels of radiation, and certain areas may 
+      remain unsafe for centuries. Thousands of cases of thyroid cancer—especially among children—have been linked to the 
+      radioactive iodine released during the disaster. Economically and socially, the accident caused immense disruption, 
+      forcing communities to abandon homes, farms, and entire towns that now remain frozen in time. The psychological impact 
+      of sudden displacement, fear, and isolation still affects survivors today.
+    </p>
 
-    <p>Today, Chernobyl stands not only as a historical tragedy but as a lesson for nuclear safety...</p>
+    <p>
+      In the years that followed, Chernobyl became a global symbol of nuclear risk and the need for strict safety culture. 
+      International agencies introduced stronger reactor design requirements, independent safety oversight, and mandatory stress tests. 
+      The original concrete sarcophagus built in 1986 deteriorated quickly, leading to the construction of the New Safe Confinement, 
+      completed in 2016, which is designed to seal the reactor for the next century. Today, Chernobyl stands not only as a 
+      historical tragedy but also as a lesson for nations developing or operating nuclear power plants.
+    </p>
 
-    <h2>Real-Time Disaster Photos (Slider)</h2>
-
-    <!-- ================== SLIDER START ================== -->
-    <div class="css-slider">
-
-      <input type="radio" name="slider" id="s1" checked>
-      <input type="radio" name="slider" id="s2">
-      <input type="radio" name="slider" id="s3">
-      <input type="radio" name="slider" id="s4">
-
-      <div class="slides">
-        <div class="slide">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Chernobyl_Disaster%2C_Reactor_4_1986.jpg">
-          <p>1986 — Reactor 4 immediately after explosion.</p>
-        </div>
-
-        <div class="slide">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Chernobyl_firefighters_1986.jpg">
-          <p>Firefighters attempting to control the fire.</p>
-        </div>
-
-        <div class="slide">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Chernobyl_reactor_4_after_explosion.jpg">
-          <p>The destroyed reactor core structure.</p>
-        </div>
-
-        <div class="slide">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Pripyat_panorama.jpg">
-          <p>Pripyat — the abandoned city near the plant.</p>
-        </div>
-      </div>
-
-      <div class="nav">
-        <label for="s1"></label>
-        <label for="s2"></label>
-        <label for="s3"></label>
-        <label for="s4"></label>
-      </div>
-
+    <h2>Timeline of Events</h2>
+    <div class="timeline">
+      <div class="event"><div class="date">26 April 1986</div><p>Reactor explosion and radioactive release.</p></div>
+      <div class="event"><div class="date">27 April 1986</div><p>Pripyat evacuated.</p></div>
+      <div class="event"><div class="date">1986–87</div><p>Cleanup and sarcophagus construction.</p></div>
+      <div class="event"><div class="date">2016</div><p>New Safe Confinement installed.</p></div>
     </div>
-    <!-- ================== SLIDER END ================== -->
 
     <h2>Image Gallery</h2>
     <div class="gallery">
