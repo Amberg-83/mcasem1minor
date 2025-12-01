@@ -18,13 +18,22 @@ margin:22px auto;padding-left:18px;border-left:3px solid #333;
 max-width:900px;text-align:left;animation:grow 1.4s ease-out forwards;
 }
 @keyframes grow{from{border-left-color:transparent;}to{border-left-color:#333;}}
-.event{opacity:0;transform:translateY(20px);animation:fade 0.8s ease forwards;margin-bottom:16px;}
+.event{opacity:0;transform:translateY(20px);animation:fade .8s ease forwards;margin-bottom:16px;}
 .event:nth-child(1){animation-delay:.4s}
 .event:nth-child(2){animation-delay:.8s}
 .event:nth-child(3){animation-delay:1.2s}
 .event:nth-child(4){animation-delay:1.6s}
 @keyframes fade{to{opacity:1;transform:translateY(0)}}
 .date{color:#ffd700;font-weight:700;}
+
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px;}
+.gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px;cursor:pointer;transition:.3s;}
+.gallery img:hover{transform:scale(1.05);}
+
+.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);justify-content:center;align-items:center;}
+.lightbox:target{display:flex;}
+.lightbox img{max-width:90%;max-height:90%;border-radius:8px;}
+.close{position:absolute;top:20px;right:20px;background:#0007;padding:5px 10px;color:#fff;font-size:26px;text-decoration:none;border-radius:6px;}
 
 iframe{width:100%;height:600px;border-radius:8px;border:1px solid #333;margin-top:20px;}
 </style>
@@ -41,40 +50,54 @@ iframe{width:100%;height:600px;border-radius:8px;border:1px solid #333;margin-to
 
 <h2>Overview & Context</h2>
 <p>
-The Chernobyl nuclear disaster occurred on 26 April 1986 at Reactor Unit 4 of the Chernobyl Nuclear Power Plant in the former Soviet Union. During a late-night safety test, reactor conditions became unstable due to design flaws and violation of operating procedures. A sudden power surge caused explosions that destroyed the reactor core and released massive amounts of radioactive material. Unlike modern reactors, Chernobyl had no containment structure, allowing radiation to spread freely. This accident had unprecedented environmental, health, and political consequences across Europe and the world.
+The Chernobyl nuclear disaster occurred on 26 April 1986 at Reactor Unit-4 of the Chernobyl Nuclear Power Plant in the former Soviet Union. During a safety test, operational rules were violated and reactor conditions became unstable. A sudden power surge caused explosions that destroyed the reactor core and released massive quantities of radioactive material. The absence of a containment structure allowed radioactive fallout to spread across large areas of Europe. Chernobyl became the most severe nuclear accident in history, with long-lasting health, environmental, and political consequences.
 </p>
 
 <h2>Causes of the Disaster</h2>
 <p>
-The primary causes of the Chernobyl disaster were human error and inherent reactor design weaknesses. Operators disabled critical safety systems and ignored operating limits during the experiment. The RBMK reactor design was unstable at low power levels and used graphite moderation without adequate containment. Inadequate safety culture, lack of transparency, and poor regulatory oversight further contributed to catastrophic failure. These factors combined to create a situation where minor operational mistakes rapidly escalated into a large-scale nuclear accident.
+The primary causes of the Chernobyl disaster were human error combined with serious reactor design flaws. Operators disabled critical safety systems and ignored operating limits during testing. The RBMK reactor had inherent instability at low power levels and lacked robust containment. Additionally, weak safety culture, inadequate training, and lack of independent regulatory oversight contributed to the disaster. These systemic failures allowed relatively small operational mistakes to escalate into a catastrophic nuclear accident.
 </p>
 
 <h2>Technical Failure Mechanism</h2>
 <p>
-Technically, the reactor experienced an uncontrolled increase in power due to design characteristics and operating errors. Water coolant rapidly converted to steam, causing pressure buildup and a violent explosion. The exposed graphite moderator ignited, sustaining a fire that burned for several days. This fire carried radioactive particles high into the atmosphere, spreading contamination across vast regions. The absence of a containment building allowed direct release of radioactive materials, making Chernobyl one of the most severe nuclear accidents in history.
+Technically, the reactor experienced a rapid and uncontrollable increase in power. Water coolant vaporized into steam, causing pressure buildup and explosions. The exposed graphite moderator ignited, sustaining a fire that released radioactive particles high into the atmosphere. Because the RBMK design lacked a containment structure, radioactive materials were dispersed directly into the environment. This mechanism resulted in widespread contamination and made Chernobyl significantly more damaging than later nuclear accidents.
 </p>
 
 <h2>Impacts of the Disaster</h2>
 <p>
-The immediate impacts included deaths among plant workers and fire fighters and evacuation of thousands of residents from nearby areas. In the long term, widespread contamination affected agriculture, forests, and water systems across multiple countries. Increased incidence of thyroid cancer, psychological trauma, and displacement of populations were observed. Large exclusion zones were established, rendering vast areas uninhabitable for decades. Economically and socially, Chernobyl caused massive disruption and long-lasting consequences for affected communities.
+The immediate impacts included deaths among plant operators and emergency responders, followed by evacuation of over 100,000 residents. Long-term consequences included widespread land contamination, increased rates of thyroid cancer, and long-lasting psychological trauma. Large exclusion zones were established and remain largely uninhabitable. Economic losses were immense, affecting agriculture, industry, and public health systems. The disaster fundamentally altered global perceptions of nuclear safety and risk.
 </p>
 
 <h2>Lessons Learned</h2>
 <p>
-The Chernobyl disaster led to major international reforms in nuclear safety and regulation. It highlighted the necessity of strong safety culture, independent regulatory bodies, and robust reactor design. Improved training, transparency, and emergency preparedness became global priorities. The construction of the New Safe Confinement structure demonstrated long-term commitment to environmental protection. Chernobyl remains a powerful reminder that technological advancement must be matched by responsibility, safety discipline, and continuous risk management.
+Chernobyl led to major reforms in global nuclear safety practices. It highlighted the need for strong safety culture, transparent reporting, and independent regulatory oversight. Reactor designs were reevaluated to include containment structures and passive safety features. Emergency preparedness, international cooperation, and operator training became central priorities. Chernobyl remains a powerful reminder that nuclear technology demands strict discipline, responsibility, and continuous vigilance to prevent catastrophic consequences.
 </p>
 
 <h2>Timeline of Events</h2>
 <div class="timeline">
 <div class="event"><div class="date">26 April 1986</div><p>Reactor explosion.</p></div>
 <div class="event"><div class="date">27 April 1986</div><p>Pripyat evacuated.</p></div>
-<div class="event"><div class="date">1986–87</div><p>Sarcophagus constructed.</p></div>
+<div class="event"><div class="date">1986–87</div><p>Sarcophagus construction.</p></div>
 <div class="event"><div class="date">2016</div><p>New Safe Confinement installed.</p></div>
+</div>
+
+<h2>Image Gallery</h2>
+<div class="gallery">
+<a href="#c1"><img src="images/c1.jpg"></a>
+<a href="#c2"><img src="images/c2.jpg"></a>
+<a href="#c3"><img src="images/c3.jpg"></a>
+<a href="#c4"><img src="images/c4.jpg"></a>
 </div>
 
 <h2>Heatmap Simulation</h2>
 <iframe src="chernobyl-map.html"></iframe>
 
 </div>
+
+<div id="c1" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c1.jpg"></div>
+<div id="c2" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c2.jpg"></div>
+<div id="c3" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c3.jpg"></div>
+<div id="c4" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c4.jpg"></div>
+
 </body>
 </html>
