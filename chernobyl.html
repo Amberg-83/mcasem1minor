@@ -40,14 +40,44 @@
     h2 { color:#ffd700; margin-bottom:10px; }
     p { margin-bottom:14px; line-height:1.7; }
 
+    /* ===== Timeline (Existing + Animation) ===== */
     .timeline {
-      margin:22px auto; padding-left:18px;
-      border-left:3px solid #333; max-width:900px;
+      margin:22px auto;
+      padding-left:18px;
+      border-left:3px solid #333;
+      max-width:900px;
       text-align:left;
+      position:relative;
+      animation: growLine 1.5s ease-out forwards;
     }
-    .event { margin-bottom:16px; }
+
+    @keyframes growLine {
+      from { border-left-color: transparent; }
+      to { border-left-color: #333; }
+    }
+
+    .event {
+      margin-bottom:16px;
+      opacity:0;
+      transform:translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .event:nth-child(1) { animation-delay:0.4s; }
+    .event:nth-child(2) { animation-delay:0.8s; }
+    .event:nth-child(3) { animation-delay:1.2s; }
+    .event:nth-child(4) { animation-delay:1.6s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
     .date { color:#ffd700; font-weight:700; }
 
+    /* ===== Gallery ===== */
     .gallery {
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -60,6 +90,7 @@
     }
     .gallery img:hover { transform:scale(1.05); }
 
+    /* ===== Lightbox ===== */
     .lightbox {
       display:none; position:fixed; top:0; left:0;
       width:100%; height:100%;
@@ -108,42 +139,42 @@
       It occurred during a late-night safety test at Reactor No. 4 of the Chernobyl Nuclear Power Plant in Ukraine, 
       which was then part of the Soviet Union. Due to a flawed reactor design and a series of operational mistakes, 
       operators disabled critical safety systems, causing a sudden and uncontrollable power surge. This led to a massive 
-      steam explosion that destroyed the reactor core and blew off the thousand-ton concrete lid, releasing radioactive 
-      material high into the atmosphere. Fires erupted across the facility, further accelerating the spread of radioactive dust.
+      steam explosion that destroyed the reactor core and blew off the thousand-ton concrete lid.
     </p>
 
     <p>
-      First responders, including firefighters and plant workers, were exposed to lethal doses of radiation within minutes 
-      without being properly informed of the danger. The nearby town of Pripyat, home to nearly 50,000 people, continued 
-      normal life for an entire day after the explosion because authorities delayed evacuation. Residents were finally 
-      moved out 36 hours later, but thousands had already received significant exposure to radionuclides such as iodine-131 
-      and cesium-137. Over the next weeks, dozens of workers died from acute radiation syndrome, and more than 100,000 people 
-      from nearby regions were permanently relocated to create a 30-km exclusion zone.
+      First responders, including firefighters and plant workers, were exposed to lethal doses of radiation within minutes. 
+      The nearby town of Pripyat continued normal life for an entire day because authorities delayed evacuation.
     </p>
 
     <p>
-      The environmental and long-term health impacts were severe. Radioactive contamination spread across Ukraine, Belarus, 
-      Russia, and parts of Europe. Farmland, forests, and rivers absorbed high levels of radiation, and certain areas may 
-      remain unsafe for centuries. Thousands of cases of thyroid cancer—especially among children—have been linked to the 
-      radioactive iodine released during the disaster. Economically and socially, the accident caused immense disruption, 
-      forcing communities to abandon homes, farms, and entire towns that now remain frozen in time. The psychological impact 
-      of sudden displacement, fear, and isolation still affects survivors today.
+      Environmental and long-term health impacts were severe. Radioactive contamination spread across large parts of Europe, 
+      and thousands of thyroid cancer cases were linked to radioactive iodine exposure.
     </p>
 
     <p>
-      In the years that followed, Chernobyl became a global symbol of nuclear risk and the need for strict safety culture. 
-      International agencies introduced stronger reactor design requirements, independent safety oversight, and mandatory stress tests. 
-      The original concrete sarcophagus built in 1986 deteriorated quickly, leading to the construction of the New Safe Confinement, 
-      completed in 2016, which is designed to seal the reactor for the next century. Today, Chernobyl stands not only as a 
-      historical tragedy but also as a lesson for nations developing or operating nuclear power plants.
+      Chernobyl became a global symbol of nuclear risk, leading to international safety reforms and the construction of the 
+      New Safe Confinement structure completed in 2016.
     </p>
 
     <h2>Timeline of Events</h2>
     <div class="timeline">
-      <div class="event"><div class="date">26 April 1986</div><p>Reactor explosion and radioactive release.</p></div>
-      <div class="event"><div class="date">27 April 1986</div><p>Pripyat evacuated.</p></div>
-      <div class="event"><div class="date">1986–87</div><p>Cleanup and sarcophagus construction.</p></div>
-      <div class="event"><div class="date">2016</div><p>New Safe Confinement installed.</p></div>
+      <div class="event">
+        <div class="date">26 April 1986</div>
+        <p>Reactor explosion and radioactive release.</p>
+      </div>
+      <div class="event">
+        <div class="date">27 April 1986</div>
+        <p>Pripyat evacuated.</p>
+      </div>
+      <div class="event">
+        <div class="date">1986–87</div>
+        <p>Cleanup and sarcophagus construction.</p>
+      </div>
+      <div class="event">
+        <div class="date">2016</div>
+        <p>New Safe Confinement installed.</p>
+      </div>
     </div>
 
     <h2>Image Gallery</h2>
