@@ -13,13 +13,8 @@
       border-bottom:2px solid #333;
       position:relative;
     }
-    .header h1 {
-      color:#ffd700;
-      font-size:28px;
-      font-weight:800;
-    }
+    .header h1 { color:#ffd700; font-size:28px; font-weight:800; }
 
-    /* HOME BUTTON */
     .home-btn {
       position:absolute;
       right:20px;
@@ -30,9 +25,7 @@
       font-weight:bold;
       border-radius:6px;
       text-decoration:none;
-      transition:0.3s;
     }
-    .home-btn:hover { background:#e5c100; }
 
     .container {
       max-width:1100px;
@@ -45,162 +38,81 @@
     h2 { color:#ffd700; margin-bottom:10px; }
     p { margin-bottom:14px; line-height:1.7; }
 
-    /* ===== Timeline (Existing) ===== */
     .timeline {
       margin:22px auto;
       padding-left:18px;
       border-left:3px solid #333;
       max-width:900px;
       text-align:left;
-      position:relative;
-      animation: growLine 1.5s ease-out forwards;
+      animation:growLine 1.5s ease-out forwards;
     }
 
     @keyframes growLine {
-      from { border-left-color: transparent; }
-      to { border-left-color: #333; }
+      from { border-left-color:transparent; }
+      to { border-left-color:#333; }
     }
 
     .event {
       margin-bottom:16px;
       opacity:0;
       transform:translateY(20px);
-      animation: fadeInUp 0.8s ease forwards;
+      animation:fadeInUp 0.8s ease forwards;
     }
 
-    .event:nth-child(1) { animation-delay:0.4s; }
-    .event:nth-child(2) { animation-delay:0.8s; }
-    .event:nth-child(3) { animation-delay:1.2s; }
+    .event:nth-child(1){animation-delay:0.4s;}
+    .event:nth-child(2){animation-delay:0.8s;}
+    .event:nth-child(3){animation-delay:1.2s;}
 
     @keyframes fadeInUp {
-      to {
-        opacity:1;
-        transform:translateY(0);
-      }
+      to { opacity:1; transform:translateY(0); }
     }
 
     .date { color:#ffd700; font-weight:700; }
 
-    /* ===== Gallery ===== */
-    .gallery {
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-      margin-top:20px;
-    }
-    .gallery img {
-      width:100%; height:160px;
-      object-fit:cover;
-      border-radius:8px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-    .gallery img:hover { transform:scale(1.05); }
-
-    /* ===== Lightbox ===== */
-    .lightbox {
-      display:none; position:fixed; top:0; left:0;
-      width:100%; height:100%;
-      background:rgba(0,0,0,0.85);
-      justify-content:center; align-items:center;
-    }
-    .lightbox:target { display:flex; }
-
-    .lightbox img {
-      max-width:90%; max-height:90%; border-radius:8px;
-    }
-
-    .close {
-      position:absolute; top:20px; right:20px;
-      background:#0007; padding:5px 10px;
-      color:white; font-size:26px;
-      border-radius:6px; text-decoration:none;
-    }
-
     iframe {
-      width:100%; height:600px;
+      width:100%;
+      height:600px;
       border-radius:8px;
       border:1px solid #333;
       margin-top:20px;
     }
-
-    @media(max-width:900px){
-      .gallery { grid-template-columns:1fr 1fr; }
-    }
-    @media(max-width:550px){
-      .gallery { grid-template-columns:1fr; }
-    }
-
   </style>
 </head>
 
 <body>
 
-  <div class="header">
-    <h1>FUKUSHIMA DAIICHI — 2011</h1>
-    <a href="index.html" class="home-btn">Home</a>
-  </div>
+<div class="header">
+  <h1>FUKUSHIMA DAIICHI — 2011</h1>
+  <a href="index.html" class="home-btn">Home</a>
+</div>
 
-  <div class="container">
+<div class="container">
 
-    <h2>Overview & Context</h2>
+<h2>Overview & Context</h2>
+<p>Fukushima Daiichi nuclear disaster occurred on March 11, 2011, following a powerful earthquake and tsunami. Backup power systems failed, leading to overheating, hydrogen explosions, and large-scale radioactive release.</p>
 
-    <p>
-      The Fukushima Daiichi nuclear disaster occurred on March 11, 2011, after one of the most powerful earthquakes ever recorded struck off Japan’s northeastern coast. 
-      The resulting tsunami overwhelmed the plant’s seawall, flooding backup generators and disabling the cooling systems. Although the reactors shut down automatically 
-      during the earthquake, the loss of power prevented circulation of coolant water, leading to dangerous overheating of the fuel rods. Within hours, the situation 
-      escalated, and over the next few days, three reactors experienced partial meltdowns. The hydrogen produced by the overheated fuel caused large explosions that 
-      severely damaged the facility, releasing radioactive materials into the air and ocean.
-    </p>
+<h2>Causes of the Disaster</h2>
+<p>The primary cause was a massive earthquake and tsunami that exceeded the plant’s design limits. Flooding disabled backup generators, stopping all cooling systems. Inadequate disaster preparedness and insufficient protection against extreme natural hazards worsened the impact.</p>
 
-    <p>
-      Japanese authorities quickly ordered mass evacuations from nearby towns and villages, ultimately displacing more than 150,000 people. Many were forced to leave 
-      behind belongings, homes, and family property without knowing whether they would ever return. Although radiation exposure levels were significantly lower than 
-      those in Chernobyl, the disaster created widespread psychological and social distress.
-    </p>
+<h2>Technical Failure Mechanism</h2>
+<p>Loss of electrical power prevented coolant circulation. Fuel rods overheated, generating hydrogen gas. Hydrogen explosions damaged reactor buildings, releasing radioactive materials into the environment.</p>
 
-    <p>
-      Environmental impacts of the accident remain a concern. Large amounts of radioactive contamination entered local soil and water bodies, prompting one of the largest 
-      decontamination efforts in Japan’s history. The handling of radioactive wastewater continues to spark global debate.
-    </p>
+<h2>Short-Term and Long-Term Impacts</h2>
+<p>Short-term effects included evacuation of over 150,000 people and radiation exposure risks. Long-term impacts include environmental contamination, economic losses, psychological trauma, and decades-long decommissioning efforts.</p>
 
-    <p>
-      More than a decade later, the Fukushima site remains in long-term decommissioning. The disaster reshaped global nuclear safety policies.
-    </p>
+<h2>Lessons Learned</h2>
+<p>The disaster emphasized the need for strong safety culture, improved disaster risk assessment, backup power redundancy, and transparent emergency response systems.</p>
 
-    <h2>Timeline</h2>
-    <div class="timeline">
-      <div class="event">
-        <div class="date">11 Mar 2011</div>
-        <p>Massive earthquake and tsunami strike Japan.</p>
-      </div>
-      <div class="event">
-        <div class="date">12–15 Mar 2011</div>
-        <p>Hydrogen explosions damage reactor buildings.</p>
-      </div>
-      <div class="event">
-        <div class="date">2011 – Present</div>
-        <p>Long-term cleanup, monitoring, and fuel removal ongoing.</p>
-      </div>
-    </div>
+<h2>Timeline</h2>
+<div class="timeline">
+  <div class="event"><div class="date">11 Mar 2011</div><p>Earthquake and tsunami hit Japan.</p></div>
+  <div class="event"><div class="date">12–15 Mar 2011</div><p>Hydrogen explosions damage reactors.</p></div>
+  <div class="event"><div class="date">2011–Present</div><p>Cleanup and decommissioning ongoing.</p></div>
+</div>
 
-    <h2>Image Gallery</h2>
-    <div class="gallery">
-      <a href="#f1"><img src="images/f1.jpg"></a>
-      <a href="#f2"><img src="images/f2.jpg"></a>
-      <a href="#f3"><img src="images/f3.jpg"></a>
-      <a href="#f4"><img src="images/f4.png"></a>
-    </div>
+<h2>Heatmap Simulation</h2>
+<iframe src="fukushima-map.html"></iframe>
 
-    <h2>Heatmap Simulation</h2>
-    <iframe src="fukushima-map.html"></iframe>
-
-  </div>
-
-  <div id="f1" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f1.jpg"></div>
-  <div id="f2" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f2.jpg"></div>
-  <div id="f3" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f3.jpg"></div>
-  <div id="f4" class="lightbox"><a class="close" href="#_">✕</a><img src="images/f4.png"></div>
-
+</div>
 </body>
 </html>
