@@ -1,199 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Chernobyl — Case Study</title>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:Arial; background:#0b0b0c; color:#eee; text-align:center; }
+<meta charset="utf-8">
+<title>Chernobyl — Case Study</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial;background:#0b0b0c;color:#eee;text-align:center;}
 
-    .header {
-      background:#111;
-      padding:20px 0;
-      border-bottom:2px solid #333;
-      position:relative;
-    }
-    .header h1 { color:#ffd700; font-size:28px; font-weight:800; }
+.header{
+background:#111;padding:20px 0;border-bottom:2px solid #333;position:relative;
+}
+.header h1{color:#ffd700;font-size:28px;font-weight:800;}
 
-    /* Home button */
-    .home-btn {
-      position:absolute;
-      right:20px;
-      top:20px;
-      background:#ffd700;
-      padding:8px 14px;
-      color:#000;
-      font-weight:bold;
-      border-radius:6px;
-      text-decoration:none;
-      transition:0.3s;
-    }
-    .home-btn:hover { background:#e5c100; }
+.home-btn{
+position:absolute;right:20px;top:20px;background:#ffd700;
+padding:8px 14px;color:#000;font-weight:bold;border-radius:6px;text-decoration:none;
+}
 
-    .container {
-      max-width:1100px; margin:30px auto;
-      background:rgba(255,255,255,0.03);
-      padding:25px; border-radius:10px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.6);
-    }
+.container{
+max-width:1100px;margin:30px auto;background:rgba(255,255,255,0.03);
+padding:25px;border-radius:10px;
+}
 
-    h2 { color:#ffd700; margin-bottom:10px; }
-    p { margin-bottom:14px; line-height:1.7; }
+h2{color:#ffd700;margin-bottom:10px;}
+p{margin-bottom:14px;line-height:1.7;}
 
-    /* ===== Timeline (Existing + Animation) ===== */
-    .timeline {
-      margin:22px auto;
-      padding-left:18px;
-      border-left:3px solid #333;
-      max-width:900px;
-      text-align:left;
-      position:relative;
-      animation: growLine 1.5s ease-out forwards;
-    }
+.timeline{
+margin:22px auto;padding-left:18px;border-left:3px solid #333;
+max-width:900px;text-align:left;animation:growLine 1.5s ease-out forwards;
+}
 
-    @keyframes growLine {
-      from { border-left-color: transparent; }
-      to { border-left-color: #333; }
-    }
+@keyframes growLine{
+from{border-left-color:transparent;}
+to{border-left-color:#333;}
+}
 
-    .event {
-      margin-bottom:16px;
-      opacity:0;
-      transform:translateY(20px);
-      animation: fadeInUp 0.8s ease forwards;
-    }
+.event{
+margin-bottom:16px;opacity:0;transform:translateY(20px);
+animation:fadeInUp 0.8s ease forwards;
+}
+.event:nth-child(1){animation-delay:0.4s;}
+.event:nth-child(2){animation-delay:0.8s;}
+.event:nth-child(3){animation-delay:1.2s;}
+.event:nth-child(4){animation-delay:1.6s;}
 
-    .event:nth-child(1) { animation-delay:0.4s; }
-    .event:nth-child(2) { animation-delay:0.8s; }
-    .event:nth-child(3) { animation-delay:1.2s; }
-    .event:nth-child(4) { animation-delay:1.6s; }
+@keyframes fadeInUp{
+to{opacity:1;transform:translateY(0);}
+}
 
-    @keyframes fadeInUp {
-      to {
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
+.date{color:#ffd700;font-weight:700;}
 
-    .date { color:#ffd700; font-weight:700; }
-
-    /* ===== Gallery ===== */
-    .gallery {
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px; margin-top:20px;
-    }
-    .gallery img {
-      width:100%; height:160px;
-      border-radius:8px; object-fit:cover;
-      cursor:pointer; transition:0.3s;
-    }
-    .gallery img:hover { transform:scale(1.05); }
-
-    /* ===== Lightbox ===== */
-    .lightbox {
-      display:none; position:fixed; top:0; left:0;
-      width:100%; height:100%;
-      background:rgba(0,0,0,0.85);
-      justify-content:center; align-items:center;
-    }
-    .lightbox:target { display:flex; }
-
-    .lightbox img { max-width:90%; max-height:90%; border-radius:8px; }
-
-    .close {
-      position:absolute; top:20px; right:20px;
-      background:#0007; padding:5px 10px;
-      color:#fff; font-size:26px;
-      text-decoration:none; border-radius:6px;
-    }
-
-    iframe {
-      width:100%; height:600px;
-      border-radius:8px; border:1px solid #333;
-      margin-top:20px;
-    }
-
-    @media(max-width:900px){
-      .gallery { grid-template-columns:1fr 1fr; }
-    }
-    @media(max-width:550px){
-      .gallery { grid-template-columns:1fr; }
-    }
-  </style>
+iframe{
+width:100%;height:600px;border-radius:8px;border:1px solid #333;margin-top:20px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="header">
-    <h1>CHERNOBYL — 1986</h1>
-    <a href="index.html" class="home-btn">Home</a>
-  </div>
+<div class="header">
+<h1>CHERNOBYL — 1986</h1>
+<a href="index.html" class="home-btn">Home</a>
+</div>
 
-  <div class="container">
+<div class="container">
 
-    <h2>Overview & Context</h2>
+<h2>Overview & Context</h2>
+<p>The Chernobyl disaster occurred on April 26, 1986, due to a flawed reactor design and serious operator errors during a safety test, causing a catastrophic explosion.</p>
 
-    <p>
-      The Chernobyl disaster of April 26, 1986, is widely regarded as the worst nuclear accident in world history. 
-      It occurred during a late-night safety test at Reactor No. 4 of the Chernobyl Nuclear Power Plant in Ukraine, 
-      which was then part of the Soviet Union. Due to a flawed reactor design and a series of operational mistakes, 
-      operators disabled critical safety systems, causing a sudden and uncontrollable power surge. This led to a massive 
-      steam explosion that destroyed the reactor core and blew off the thousand-ton concrete lid.
-    </p>
+<h2>Causes of the Disaster</h2>
+<p>The accident resulted from human error combined with an unstable RBMK reactor design. Operators disabled safety mechanisms, triggering an uncontrollable power surge.</p>
 
-    <p>
-      First responders, including firefighters and plant workers, were exposed to lethal doses of radiation within minutes. 
-      The nearby town of Pripyat continued normal life for an entire day because authorities delayed evacuation.
-    </p>
+<h2>Technical Failure Mechanism</h2>
+<p>Excessive reactor power caused fuel rupture and a steam explosion. The exposed graphite moderator ignited, releasing radioactive particles directly into the atmosphere.</p>
 
-    <p>
-      Environmental and long-term health impacts were severe. Radioactive contamination spread across large parts of Europe, 
-      and thousands of thyroid cancer cases were linked to radioactive iodine exposure.
-    </p>
+<h2>Short-Term and Long-Term Impacts</h2>
+<p>Immediate impacts included severe radiation exposure and evacuation. Long-term effects include increased cancer rates, environmental contamination, and permanent exclusion zones.</p>
 
-    <p>
-      Chernobyl became a global symbol of nuclear risk, leading to international safety reforms and the construction of the 
-      New Safe Confinement structure completed in 2016.
-    </p>
+<h2>Lessons Learned</h2>
+<p>The disaster highlighted the importance of strong safety culture, proper training, and independent regulatory oversight in nuclear power operations.</p>
 
-    <h2>Timeline of Events</h2>
-    <div class="timeline">
-      <div class="event">
-        <div class="date">26 April 1986</div>
-        <p>Reactor explosion and radioactive release.</p>
-      </div>
-      <div class="event">
-        <div class="date">27 April 1986</div>
-        <p>Pripyat evacuated.</p>
-      </div>
-      <div class="event">
-        <div class="date">1986–87</div>
-        <p>Cleanup and sarcophagus construction.</p>
-      </div>
-      <div class="event">
-        <div class="date">2016</div>
-        <p>New Safe Confinement installed.</p>
-      </div>
-    </div>
+<h2>Timeline of Events</h2>
+<div class="timeline">
+  <div class="event"><div class="date">26 April 1986</div><p>Reactor explosion.</p></div>
+  <div class="event"><div class="date">27 April 1986</div><p>Pripyat evacuated.</p></div>
+  <div class="event"><div class="date">1986–87</div><p>Sarcophagus construction.</p></div>
+  <div class="event"><div class="date">2016</div><p>New Safe Confinement installed.</p></div>
+</div>
 
-    <h2>Image Gallery</h2>
-    <div class="gallery">
-      <a href="#c1"><img src="images/c1.jpg"></a>
-      <a href="#c2"><img src="images/c2.jpg"></a>
-      <a href="#c3"><img src="images/c3.jpg"></a>
-      <a href="#c4"><img src="images/c4.jpg"></a>
-    </div>
+<h2>Heatmap Simulation</h2>
+<iframe src="chernobyl-map.html"></iframe>
 
-    <h2>Heatmap Simulation</h2>
-    <iframe src="chernobyl-map.html"></iframe>
-
-  </div>
-
-  <div id="c1" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c1.jpg"></div>
-  <div id="c2" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c2.jpg"></div>
-  <div id="c3" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c3.jpg"></div>
-  <div id="c4" class="lightbox"><a class="close" href="#_">✕</a><img src="images/c4.jpg"></div>
-
+</div>
 </body>
 </html>
