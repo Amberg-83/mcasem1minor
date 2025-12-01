@@ -45,17 +45,43 @@
     h2 { color:#ffd700; margin-bottom:10px; }
     p { margin-bottom:14px; line-height:1.7; }
 
+    /* ===== Timeline (Existing) ===== */
     .timeline {
       margin:22px auto;
       padding-left:18px;
       border-left:3px solid #333;
       max-width:900px;
       text-align:left;
+      position:relative;
+      animation: growLine 1.5s ease-out forwards;
     }
 
-    .event { margin-bottom:16px; }
+    @keyframes growLine {
+      from { border-left-color: transparent; }
+      to { border-left-color: #333; }
+    }
+
+    .event {
+      margin-bottom:16px;
+      opacity:0;
+      transform:translateY(20px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .event:nth-child(1) { animation-delay:0.4s; }
+    .event:nth-child(2) { animation-delay:0.8s; }
+    .event:nth-child(3) { animation-delay:1.2s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
     .date { color:#ffd700; font-weight:700; }
 
+    /* ===== Gallery ===== */
     .gallery {
       display:grid;
       grid-template-columns:repeat(4,1fr);
@@ -71,6 +97,7 @@
     }
     .gallery img:hover { transform:scale(1.05); }
 
+    /* ===== Lightbox ===== */
     .lightbox {
       display:none; position:fixed; top:0; left:0;
       width:100%; height:100%;
@@ -129,29 +156,32 @@
     <p>
       Japanese authorities quickly ordered mass evacuations from nearby towns and villages, ultimately displacing more than 150,000 people. Many were forced to leave 
       behind belongings, homes, and family property without knowing whether they would ever return. Although radiation exposure levels were significantly lower than 
-      those in Chernobyl, the disaster created widespread psychological and social distress. Families were separated, industries halted, and the region experienced long-term 
-      economic disruption. Some residents were unable to return for years due to contamination and fear, while others have permanently resettled elsewhere.
+      those in Chernobyl, the disaster created widespread psychological and social distress.
     </p>
 
     <p>
       Environmental impacts of the accident remain a concern. Large amounts of radioactive contamination entered local soil and water bodies, prompting one of the largest 
-      decontamination efforts in Japan’s history. Millions of tons of contaminated soil were collected and stored in secure facilities. The handling of radioactive wastewater 
-      used to cool the damaged reactors has been among the most debated issues. Japan implemented multi-stage filtration to reduce radioactive content and has begun releasing 
-      treated water into the Pacific Ocean under international supervision. Despite safety assurances, the issue continues to spark global debate and public concern.
+      decontamination efforts in Japan’s history. The handling of radioactive wastewater continues to spark global debate.
     </p>
 
     <p>
-      More than a decade later, the Fukushima site remains in a long-term decommissioning phase that could span 30 to 40 years. Removing the melted fuel debris is considered 
-      one of the most difficult engineering tasks ever attempted in nuclear history. The disaster prompted countries around the world to reassess nuclear safety practices, 
-      leading to stronger coastal protection, improved emergency protocols, and enhanced operator training. Fukushima stands as a reminder of how natural disasters can 
-      trigger complex technological emergencies and underscores the importance of preparedness, transparency, and robust engineering design.
+      More than a decade later, the Fukushima site remains in long-term decommissioning. The disaster reshaped global nuclear safety policies.
     </p>
 
     <h2>Timeline</h2>
     <div class="timeline">
-      <div class="event"><div class="date">11 Mar 2011</div><p>Massive earthquake and tsunami strike Japan.</p></div>
-      <div class="event"><div class="date">12–15 Mar 2011</div><p>Hydrogen explosions damage reactors.</p></div>
-      <div class="event"><div class="date">2011–Now</div><p>Long-term cleanup and fuel removal continue.</p></div>
+      <div class="event">
+        <div class="date">11 Mar 2011</div>
+        <p>Massive earthquake and tsunami strike Japan.</p>
+      </div>
+      <div class="event">
+        <div class="date">12–15 Mar 2011</div>
+        <p>Hydrogen explosions damage reactor buildings.</p>
+      </div>
+      <div class="event">
+        <div class="date">2011 – Present</div>
+        <p>Long-term cleanup, monitoring, and fuel removal ongoing.</p>
+      </div>
     </div>
 
     <h2>Image Gallery</h2>
