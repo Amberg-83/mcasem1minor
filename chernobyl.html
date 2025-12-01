@@ -6,53 +6,27 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:Arial;background:#0b0b0c;color:#eee;text-align:center;}
-
-.header{
-background:#111;padding:20px 0;border-bottom:2px solid #333;position:relative;
-}
+.header{background:#111;padding:20px 0;border-bottom:2px solid #333;position:relative;}
 .header h1{color:#ffd700;font-size:28px;font-weight:800;}
-
-.home-btn{
-position:absolute;right:20px;top:20px;background:#ffd700;
-padding:8px 14px;color:#000;font-weight:bold;border-radius:6px;text-decoration:none;
-}
-
-.container{
-max-width:1100px;margin:30px auto;background:rgba(255,255,255,0.03);
-padding:25px;border-radius:10px;
-}
-
+.home-btn{position:absolute;right:20px;top:20px;background:#ffd700;padding:8px 14px;color:#000;font-weight:bold;border-radius:6px;text-decoration:none;}
+.container{max-width:1100px;margin:30px auto;background:rgba(255,255,255,0.03);padding:25px;border-radius:10px;}
 h2{color:#ffd700;margin-bottom:10px;}
-p{margin-bottom:14px;line-height:1.7;}
+p{text-align:justify;margin-bottom:16px;line-height:1.75;}
 
 .timeline{
 margin:22px auto;padding-left:18px;border-left:3px solid #333;
-max-width:900px;text-align:left;animation:growLine 1.5s ease-out forwards;
+max-width:900px;text-align:left;animation:grow 1.4s ease-out forwards;
 }
-
-@keyframes growLine{
-from{border-left-color:transparent;}
-to{border-left-color:#333;}
-}
-
-.event{
-margin-bottom:16px;opacity:0;transform:translateY(20px);
-animation:fadeInUp 0.8s ease forwards;
-}
-.event:nth-child(1){animation-delay:0.4s;}
-.event:nth-child(2){animation-delay:0.8s;}
-.event:nth-child(3){animation-delay:1.2s;}
-.event:nth-child(4){animation-delay:1.6s;}
-
-@keyframes fadeInUp{
-to{opacity:1;transform:translateY(0);}
-}
-
+@keyframes grow{from{border-left-color:transparent;}to{border-left-color:#333;}}
+.event{opacity:0;transform:translateY(20px);animation:fade 0.8s ease forwards;margin-bottom:16px;}
+.event:nth-child(1){animation-delay:.4s}
+.event:nth-child(2){animation-delay:.8s}
+.event:nth-child(3){animation-delay:1.2s}
+.event:nth-child(4){animation-delay:1.6s}
+@keyframes fade{to{opacity:1;transform:translateY(0)}}
 .date{color:#ffd700;font-weight:700;}
 
-iframe{
-width:100%;height:600px;border-radius:8px;border:1px solid #333;margin-top:20px;
-}
+iframe{width:100%;height:600px;border-radius:8px;border:1px solid #333;margin-top:20px;}
 </style>
 </head>
 
@@ -66,26 +40,36 @@ width:100%;height:600px;border-radius:8px;border:1px solid #333;margin-top:20px;
 <div class="container">
 
 <h2>Overview & Context</h2>
-<p>The Chernobyl disaster occurred on April 26, 1986, due to a flawed reactor design and serious operator errors during a safety test, causing a catastrophic explosion.</p>
+<p>
+The Chernobyl nuclear disaster occurred on 26 April 1986 at Reactor Unit 4 of the Chernobyl Nuclear Power Plant in the former Soviet Union. During a late-night safety test, reactor conditions became unstable due to design flaws and violation of operating procedures. A sudden power surge caused explosions that destroyed the reactor core and released massive amounts of radioactive material. Unlike modern reactors, Chernobyl had no containment structure, allowing radiation to spread freely. This accident had unprecedented environmental, health, and political consequences across Europe and the world.
+</p>
 
 <h2>Causes of the Disaster</h2>
-<p>The accident resulted from human error combined with an unstable RBMK reactor design. Operators disabled safety mechanisms, triggering an uncontrollable power surge.</p>
+<p>
+The primary causes of the Chernobyl disaster were human error and inherent reactor design weaknesses. Operators disabled critical safety systems and ignored operating limits during the experiment. The RBMK reactor design was unstable at low power levels and used graphite moderation without adequate containment. Inadequate safety culture, lack of transparency, and poor regulatory oversight further contributed to catastrophic failure. These factors combined to create a situation where minor operational mistakes rapidly escalated into a large-scale nuclear accident.
+</p>
 
 <h2>Technical Failure Mechanism</h2>
-<p>Excessive reactor power caused fuel rupture and a steam explosion. The exposed graphite moderator ignited, releasing radioactive particles directly into the atmosphere.</p>
+<p>
+Technically, the reactor experienced an uncontrolled increase in power due to design characteristics and operating errors. Water coolant rapidly converted to steam, causing pressure buildup and a violent explosion. The exposed graphite moderator ignited, sustaining a fire that burned for several days. This fire carried radioactive particles high into the atmosphere, spreading contamination across vast regions. The absence of a containment building allowed direct release of radioactive materials, making Chernobyl one of the most severe nuclear accidents in history.
+</p>
 
-<h2>Short-Term and Long-Term Impacts</h2>
-<p>Immediate impacts included severe radiation exposure and evacuation. Long-term effects include increased cancer rates, environmental contamination, and permanent exclusion zones.</p>
+<h2>Impacts of the Disaster</h2>
+<p>
+The immediate impacts included deaths among plant workers and fire fighters and evacuation of thousands of residents from nearby areas. In the long term, widespread contamination affected agriculture, forests, and water systems across multiple countries. Increased incidence of thyroid cancer, psychological trauma, and displacement of populations were observed. Large exclusion zones were established, rendering vast areas uninhabitable for decades. Economically and socially, Chernobyl caused massive disruption and long-lasting consequences for affected communities.
+</p>
 
 <h2>Lessons Learned</h2>
-<p>The disaster highlighted the importance of strong safety culture, proper training, and independent regulatory oversight in nuclear power operations.</p>
+<p>
+The Chernobyl disaster led to major international reforms in nuclear safety and regulation. It highlighted the necessity of strong safety culture, independent regulatory bodies, and robust reactor design. Improved training, transparency, and emergency preparedness became global priorities. The construction of the New Safe Confinement structure demonstrated long-term commitment to environmental protection. Chernobyl remains a powerful reminder that technological advancement must be matched by responsibility, safety discipline, and continuous risk management.
+</p>
 
 <h2>Timeline of Events</h2>
 <div class="timeline">
-  <div class="event"><div class="date">26 April 1986</div><p>Reactor explosion.</p></div>
-  <div class="event"><div class="date">27 April 1986</div><p>Pripyat evacuated.</p></div>
-  <div class="event"><div class="date">1986–87</div><p>Sarcophagus construction.</p></div>
-  <div class="event"><div class="date">2016</div><p>New Safe Confinement installed.</p></div>
+<div class="event"><div class="date">26 April 1986</div><p>Reactor explosion.</p></div>
+<div class="event"><div class="date">27 April 1986</div><p>Pripyat evacuated.</p></div>
+<div class="event"><div class="date">1986–87</div><p>Sarcophagus constructed.</p></div>
+<div class="event"><div class="date">2016</div><p>New Safe Confinement installed.</p></div>
 </div>
 
 <h2>Heatmap Simulation</h2>
